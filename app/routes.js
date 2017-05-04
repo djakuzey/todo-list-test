@@ -17,32 +17,41 @@ export default function createRoutes(store) {
   const { injectReducer, injectSagas } = getAsyncInjectors(store);
 
   return [
-    {
-      path: '/',
-      name: 'home',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/HomePage/reducer'),
-          import('containers/HomePage/sagas'),
-          import('containers/HomePage'),
-        ]);
+    // {
+    //   path: '/',
+    //   name: 'home',
+    //   getComponent(nextState, cb) {
+    //     const importModules = Promise.all([
+    //       import('containers/HomePage/reducer'),
+    //       import('containers/HomePage/sagas'),
+    //       import('containers/HomePage'),
+    //     ]);
 
-        const renderRoute = loadModule(cb);
+    //     const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer, sagas, component]) => {
-          injectReducer('home', reducer.default);
-          injectSagas(sagas.default);
+    //     importModules.then(([reducer, sagas, component]) => {
+    //       injectReducer('home', reducer.default);
+    //       injectSagas(sagas.default);
 
-          renderRoute(component);
-        });
+    //       renderRoute(component);
+    //     });
 
-        importModules.catch(errorLoading);
-      },
-    }, {
+    //     importModules.catch(errorLoading);
+    //   },
+    // },
+     {
       path: '/features',
       name: 'features',
       getComponent(nextState, cb) {
         import('containers/FeaturePage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },{
+      path: '/',
+      name: 'todolist',
+      getComponent(nextState, cb) {
+        import('containers/ToDoList')
           .then(loadModule(cb))
           .catch(errorLoading);
       },

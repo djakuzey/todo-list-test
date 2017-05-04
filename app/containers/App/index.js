@@ -25,7 +25,7 @@ const AppWrapper = styled.div`
 
 export function App(props) {
   return (
-    <AppWrapper>
+    <div>
       <Helmet
         titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
@@ -33,10 +33,10 @@ export function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <Header />
+      
       {React.Children.toArray(props.children)}
-      <Footer />
-    </AppWrapper>
+      
+    </div>
   );
 }
 
