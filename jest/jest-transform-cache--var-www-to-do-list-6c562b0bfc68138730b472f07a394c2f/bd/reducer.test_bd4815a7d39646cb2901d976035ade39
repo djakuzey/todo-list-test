@@ -1,0 +1,148 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_reducer = require('../reducer'); /* istanbul ignore next */var _reducer2 = _interopRequireDefault(_reducer);
+var /* istanbul ignore next */_actions = require('../actions'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;} else {return Array.from(arr);}}
+
+
+
+
+
+
+
+
+describe('todoReducer', function () {
+  var state = /* istanbul ignore next */void 0;
+  beforeEach(function () {
+    state = [
+    {
+      id: 0,
+      title: 'hello',
+      isDone: false,
+      subtasks: [{
+        id: 5,
+        title: 'hello',
+        isDone: false }] },
+
+
+
+    {
+      id: 1,
+      title: 'test',
+      isDone: true,
+      subtasks: [] }];
+
+
+  });
+
+  it('should return the initial state', function () {
+    var expectedResult = state;
+    expect( /* istanbul ignore next */(0, _reducer2.default)(undefined, {})).toEqual(expectedResult);
+  });
+
+  it('should handle the addTask action correctly', function () {
+    var title = 'test';
+
+    var expectedResult = /* istanbul ignore next */[].concat(_toConsumableArray(
+    state), [
+    {
+      id: Date.now() + 1,
+      title: title,
+      isDone: false,
+      subtasks: [] }]);
+
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.addTask)(title))).toEqual(expectedResult);
+  });
+
+  it('should handle the deleteTask action correctly', function () {
+    var testId = 0;
+    var expectedResult = state.filter(
+    function (task) /* istanbul ignore next */{return task.id !== testId;});
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.deleteTask)(testId))).toEqual(expectedResult);
+  });
+
+  it('should handle the toggleTask action correctly', function () {
+    var testId = 0;
+    var expectedResult = state.map(function (task) /* istanbul ignore next */{return {
+        id: task.id,
+        title: task.title,
+        isDone: task.id === testId ? !task.isDone : task.isDone,
+        subtasks: task.subtasks.map(function (subtask) /* istanbul ignore next */{return {
+            id: subtask.id,
+            title: subtask.title,
+            isDone: task.id === testId ? !task.isDone : task.isDone };}) };});
+
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.toggleTask)(testId))).toEqual(expectedResult);
+  });
+
+  it('should handle the addSubTask action correctly', function () {
+    var testId = 0;
+    var testTitle = 'test';
+    var expectedResult = state.map(function (task) /* istanbul ignore next */{return {
+        subtasks: testId === task.id ? /* istanbul ignore next */[].concat(_toConsumableArray(
+
+        task.subtasks), [
+        {
+          id: 4,
+          title: testTitle,
+          isDone: false }]) :
+
+
+        task.subtasks,
+        id: task.id,
+        title: task.title,
+        isDone: task.isDone };});
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.addSubTask)(testId, testTitle))).toEqual(expectedResult);
+  });
+
+  it('should handle the deleteSubTask action correctly', function () {
+    var testId = 0;
+    var secondTestId = 5;
+    var expectedResult = state.map(function (task) /* istanbul ignore next */{return {
+        id: task.id,
+        title: task.title,
+        isDone: task.isDone,
+        subtasks: task.id === testId ?
+        task.subtasks.filter(function (subtask) /* istanbul ignore next */{return (
+            subtask.id !== secondTestId);}) :
+
+        task.subtasks };});
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.deleteSubTask)(testId, secondTestId))).toEqual(expectedResult);
+  });
+
+  it('should handle the toggleSubTask action correctly', function () {
+    var testId = 0;
+    var secondTestId = 5;
+    var expectedResult = state.map(function (task) /* istanbul ignore next */{return {
+        id: task.id,
+        title: task.title,
+        isDone: task.isDone,
+        subtasks: task.id === testId ?
+        task.subtasks.map(function (subtask) {
+          if (subtask.id === secondTestId) {
+            return {
+              id: subtask.id,
+              title: subtask.title,
+              isDone: !subtask.isDone };
+
+          }
+
+          return subtask;
+        }) :
+        task.subtasks };});
+
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.toggleSubTask)(testId, secondTestId))).toEqual(expectedResult);
+  });
+
+
+});

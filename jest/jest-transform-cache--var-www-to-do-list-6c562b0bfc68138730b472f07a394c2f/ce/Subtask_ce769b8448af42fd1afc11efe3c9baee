@@ -1,0 +1,49 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_qmf2gklht = function () {var path = '/var/www/to do list/app/components/TodoList/Subtask.js',hash = '7db85a0b89c52664dd18d199c97c54ea2a3a7f02',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/TodoList/Subtask.js', statementMap: { '0': { start: { line: 10, column: 4 }, end: { line: 13, column: 6 } }, '1': { start: { line: 17, column: 4 }, end: { line: 20, column: 6 } }, '2': { start: { line: 24, column: 20 }, end: { line: 24, column: 38 } }, '3': { start: { line: 26, column: 20 }, end: { line: 26, column: 24 } }, '4': { start: { line: 28, column: 4 }, end: { line: 30, column: 5 } }, '5': { start: { line: 29, column: 6 }, end: { line: 29, column: 40 } }, '6': { start: { line: 32, column: 4 }, end: { line: 48, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 9, column: 12 }, end: { line: 9, column: 13 } }, loc: { start: { line: 9, column: 21 }, end: { line: 14, column: 3 } }, line: 9 }, '1': { name: '(anonymous_1)', decl: { start: { line: 16, column: 13 }, end: { line: 16, column: 14 } }, loc: { start: { line: 16, column: 22 }, end: { line: 21, column: 3 } }, line: 16 }, '2': { name: '(anonymous_2)', decl: { start: { line: 23, column: 2 }, end: { line: 23, column: 3 } }, loc: { start: { line: 23, column: 11 }, end: { line: 49, column: 3 } }, line: 23 } }, branchMap: { '0': { loc: { start: { line: 28, column: 4 }, end: { line: 30, column: 5 } }, type: 'if', locations: [{ start: { line: 28, column: 4 }, end: { line: 30, column: 5 } }, { start: { line: 28, column: 4 }, end: { line: 30, column: 5 } }], line: 28 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_aphrodite = require('aphrodite');
+var /* istanbul ignore next */_styles = require('./styles'); /* istanbul ignore next */var _styles2 = _interopRequireDefault(_styles);
+var /* istanbul ignore next */_reactFa = require('react-fa'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+Subtask = function (_React$Component) {_inherits(Subtask, _React$Component);function Subtask() {var _ref;var _temp, _this, _ret;_classCallCheck(this, Subtask);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Subtask.__proto__ || Object.getPrototypeOf(Subtask)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+    onCheck = function (event) {/* istanbul ignore next */++cov_qmf2gklht.f[0];++cov_qmf2gklht.s[0];
+      /* istanbul ignore next */_this.props.toggleSubTask(
+      /* istanbul ignore next */_this.props.taskId,
+      /* istanbul ignore next */_this.props.subtask.id);
+
+    }, _this.
+
+    onDelete = function (event) {/* istanbul ignore next */++cov_qmf2gklht.f[1];++cov_qmf2gklht.s[1];
+      /* istanbul ignore next */_this.props.deleteSubTask(
+      /* istanbul ignore next */_this.props.taskId,
+      /* istanbul ignore next */_this.props.subtask.id);
+
+    }, _temp), _possibleConstructorReturn(_this, _ret);}_createClass(Subtask, [{ key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_qmf2gklht.f[2];
+      var subtask = /* istanbul ignore next */(++cov_qmf2gklht.s[2], this.props.subtask);
+
+      var taskStyle = /* istanbul ignore next */(++cov_qmf2gklht.s[3], null); /* istanbul ignore next */++cov_qmf2gklht.s[4];
+
+      if (subtask.isDone) {/* istanbul ignore next */++cov_qmf2gklht.b[0][0];++cov_qmf2gklht.s[5];
+        taskStyle = /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.task_done);
+      } else /* istanbul ignore next */{++cov_qmf2gklht.b[0][1];}++cov_qmf2gklht.s[6];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.sub_task) },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: taskStyle }, subtask.title),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+                className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.btn_todo),
+                onClick: this.onCheck },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactFa.Icon, /* istanbul ignore next */{ name: 'check' })),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+                className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.btn_todo),
+                onClick: this.onDelete },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactFa.Icon, /* istanbul ignore next */{ name: 'trash' })))));
+
+
+
+
+    } }]);return Subtask;}( /* istanbul ignore next */_react2.default.Component); /* istanbul ignore next */exports.default = Subtask;

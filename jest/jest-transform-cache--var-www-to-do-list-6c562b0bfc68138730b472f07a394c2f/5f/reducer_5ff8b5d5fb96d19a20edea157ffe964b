@@ -1,0 +1,40 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1srjfw19ay = function () {var path = '/var/www/to do list/app/containers/App/reducer.js',hash = 'fb65882fb2b206649afe386e751b3f335828848d',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/App/reducer.js', statementMap: { '0': { start: { line: 10, column: 21 }, end: { line: 17, column: 2 } }, '1': { start: { line: 20, column: 2 }, end: { line: 37, column: 3 } }, '2': { start: { line: 22, column: 6 }, end: { line: 25, column: 52 } }, '3': { start: { line: 27, column: 6 }, end: { line: 30, column: 45 } }, '4': { start: { line: 32, column: 6 }, end: { line: 34, column: 31 } }, '5': { start: { line: 36, column: 6 }, end: { line: 36, column: 19 } } }, fnMap: { '0': { name: 'appReducer', decl: { start: { line: 19, column: 9 }, end: { line: 19, column: 19 } }, loc: { start: { line: 19, column: 50 }, end: { line: 38, column: 1 } }, line: 19 } }, branchMap: { '0': { loc: { start: { line: 19, column: 20 }, end: { line: 19, column: 40 } }, type: 'default-arg', locations: [{ start: { line: 19, column: 28 }, end: { line: 19, column: 40 } }], line: 19 }, '1': { loc: { start: { line: 20, column: 2 }, end: { line: 37, column: 3 } }, type: 'switch', locations: [{ start: { line: 21, column: 4 }, end: { line: 25, column: 52 } }, { start: { line: 26, column: 4 }, end: { line: 30, column: 45 } }, { start: { line: 31, column: 4 }, end: { line: 34, column: 31 } }, { start: { line: 35, column: 4 }, end: { line: 36, column: 19 } }], line: 20 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0 }, b: { '0': [0], '1': [0, 0, 0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_constants = require('./constants');
+
+
+
+
+
+// The initial state of the App
+var initialState = /* istanbul ignore next */(++cov_1srjfw19ay.s[0], /* istanbul ignore next */(0, _immutable.fromJS)({
+  loading: false,
+  error: false,
+  currentUser: false,
+  userData: {
+    repositories: false } }));
+
+
+
+function appReducer() {/* istanbul ignore next */var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (++cov_1srjfw19ay.b[0][0], initialState); /* istanbul ignore next */var action = arguments[1]; /* istanbul ignore next */++cov_1srjfw19ay.f[0];++cov_1srjfw19ay.s[1];
+  switch (action.type) {
+    case /* istanbul ignore next */_constants.LOAD_REPOS: /* istanbul ignore next */++cov_1srjfw19ay.b[1][0];++cov_1srjfw19ay.s[2];
+      return state.
+      set('loading', true).
+      set('error', false).
+      setIn(['userData', 'repositories'], false);
+    case /* istanbul ignore next */_constants.LOAD_REPOS_SUCCESS: /* istanbul ignore next */++cov_1srjfw19ay.b[1][1];++cov_1srjfw19ay.s[3];
+      return state.
+      setIn(['userData', 'repositories'], action.repos).
+      set('loading', false).
+      set('currentUser', action.username);
+    case /* istanbul ignore next */_constants.LOAD_REPOS_ERROR: /* istanbul ignore next */++cov_1srjfw19ay.b[1][2];++cov_1srjfw19ay.s[4];
+      return state.
+      set('error', action.error).
+      set('loading', false);
+    default: /* istanbul ignore next */++cov_1srjfw19ay.b[1][3];++cov_1srjfw19ay.s[5];
+      return state;}
+
+} /* istanbul ignore next */exports.default =
+
+appReducer;

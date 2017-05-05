@@ -1,0 +1,61 @@
+/* istanbul ignore next */'use strict';
+
+
+
+var /* istanbul ignore next */_request = require('../request'); /* istanbul ignore next */var _request2 = _interopRequireDefault(_request);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('request', function () {
+  // Before each test, stub the fetch function
+  beforeEach(function () {
+    window.fetch = jest.fn();
+  });
+
+  describe('stubbing successful response', function () {
+    // Before each test, pretend we got a successful response
+    beforeEach(function () {
+      var res = new Response('{"hello":"world"}', {
+        status: 200,
+        headers: {
+          'Content-type': 'application/json' } });
+
+
+
+      window.fetch.mockReturnValue(Promise.resolve(res));
+    });
+
+    it('should format the response correctly', function (done) {
+      /* istanbul ignore next */(0, _request2.default)('/thisurliscorrect').
+      catch(done).
+      then(function (json) {
+        expect(json.hello).toBe('world');
+        done();
+      });
+    });
+  });
+
+  describe('stubbing error response', function () {
+    // Before each test, pretend we got an unsuccessful response
+    beforeEach(function () {
+      var res = new Response('', {
+        status: 404,
+        statusText: 'Not Found',
+        headers: {
+          'Content-type': 'application/json' } });
+
+
+
+      window.fetch.mockReturnValue(Promise.resolve(res));
+    });
+
+    it('should catch errors', function (done) {
+      /* istanbul ignore next */(0, _request2.default)('/thisdoesntexist').
+      catch(function (err) {
+        expect(err.response.status).toBe(404);
+        expect(err.response.statusText).toBe('Not Found');
+        done();
+      });
+    });
+  });
+}); /**
+     * Test the request function
+     */

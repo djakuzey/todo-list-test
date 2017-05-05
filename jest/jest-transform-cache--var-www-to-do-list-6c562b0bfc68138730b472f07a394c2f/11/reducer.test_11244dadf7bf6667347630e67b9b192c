@@ -1,0 +1,60 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_reducer = require('../reducer'); /* istanbul ignore next */var _reducer2 = _interopRequireDefault(_reducer);
+var /* istanbul ignore next */_actions = require('../actions'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+
+
+
+
+describe('appReducer', function () {
+  var state = /* istanbul ignore next */void 0;
+  beforeEach(function () {
+    state = /* istanbul ignore next */(0, _immutable.fromJS)({
+      loading: false,
+      error: false,
+      currentUser: false,
+      userData: /* istanbul ignore next */(0, _immutable.fromJS)({
+        repositories: false }) });
+
+
+  });
+
+  it('should return the initial state', function () {
+    var expectedResult = state;
+    expect( /* istanbul ignore next */(0, _reducer2.default)(undefined, {})).toEqual(expectedResult);
+  });
+
+  it('should handle the loadRepos action correctly', function () {
+    var expectedResult = state.
+    set('loading', true).
+    set('error', false).
+    setIn(['userData', 'repositories'], false);
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.loadRepos)())).toEqual(expectedResult);
+  });
+
+  it('should handle the reposLoaded action correctly', function () {
+    var fixture = [{
+      name: 'My Repo' }];
+
+    var username = 'test';
+    var expectedResult = state.
+    setIn(['userData', 'repositories'], fixture).
+    set('loading', false).
+    set('currentUser', username);
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.reposLoaded)(fixture, username))).toEqual(expectedResult);
+  });
+
+  it('should handle the repoLoadingError action correctly', function () {
+    var fixture = {
+      msg: 'Not found' };
+
+    var expectedResult = state.
+    set('error', fixture).
+    set('loading', false);
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.repoLoadingError)(fixture))).toEqual(expectedResult);
+  });
+});

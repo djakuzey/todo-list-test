@@ -1,0 +1,20 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_263l1scg0c = function () {var path = '/var/www/to do list/app/components/ListItem/index.js',hash = 'afc5ee80e4ef0aac8efeccdaeab0f975f6de311d',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/ListItem/index.js', statementMap: { '0': { start: { line: 7, column: 2 }, end: { line: 13, column: 4 } }, '1': { start: { line: 16, column: 0 }, end: { line: 18, column: 2 } } }, fnMap: { '0': { name: 'ListItem', decl: { start: { line: 6, column: 9 }, end: { line: 6, column: 17 } }, loc: { start: { line: 6, column: 25 }, end: { line: 14, column: 1 } }, line: 6 } }, branchMap: {}, s: { '0': 0, '1': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_Item = require('./Item'); /* istanbul ignore next */var _Item2 = _interopRequireDefault(_Item);
+var /* istanbul ignore next */_Wrapper = require('./Wrapper'); /* istanbul ignore next */var _Wrapper2 = _interopRequireDefault(_Wrapper);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function ListItem(props) {/* istanbul ignore next */++cov_263l1scg0c.f[0];++cov_263l1scg0c.s[0];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Item2.default, /* istanbul ignore next */null,
+        props.item)));
+
+
+
+} /* istanbul ignore next */++cov_263l1scg0c.s[1];
+
+ListItem.propTypes = {
+  item: /* istanbul ignore next */_react2.default.PropTypes.any }; /* istanbul ignore next */exports.default =
+
+
+ListItem;

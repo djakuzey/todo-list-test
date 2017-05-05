@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });
+
+
+
+
+var /* istanbul ignore next */_reactIntl = require('react-intl'); /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactIntl.defineMessages)({
+  header: {
+    id: 'boilerplate.containers.NotFoundPage.header',
+    defaultMessage: 'Page not found.' } }); /*
+                                             * NotFoundPage Messages
+                                             *
+                                             * This contains all the text for the NotFoundPage component.
+                                             */

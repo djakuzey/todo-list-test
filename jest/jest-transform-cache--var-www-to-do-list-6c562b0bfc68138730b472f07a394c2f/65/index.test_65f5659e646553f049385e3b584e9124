@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);
+var /* istanbul ignore next */_actions = require('containers/ToDoList/actions'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<TodoInput />', function () {
+  it('should set empty state', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.render)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ addTask: /* istanbul ignore next */_actions.addTask }));
+
+
+    expect(renderedComponent.state('text')).toBe('');
+  });
+});

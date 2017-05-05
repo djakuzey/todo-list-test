@@ -1,0 +1,12 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_lgb0afcrk = function () {var path = '/var/www/to do list/app/components/List/Ul.js',hash = '9bece10ad16e8c69848a97bb62ee6d1f93781b3e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/List/Ul.js', statementMap: { '0': { start: { line: 3, column: 11 }, end: { line: 10, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  list-style: none;\n  margin: 0;\n  width: 100%;\n  max-height: 30em;\n  overflow-y: auto;\n  padding: 0 1em;\n'], ['\n  list-style: none;\n  margin: 0;\n  width: 100%;\n  max-height: 30em;\n  overflow-y: auto;\n  padding: 0 1em;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var Ul = /* istanbul ignore next */(++cov_lgb0afcrk.s[0], /* istanbul ignore next */_styledComponents2.default.ul(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+
+
+
+Ul;

@@ -1,0 +1,30 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1ilihjyynm = function () {var path = '/var/www/to do list/app/containers/App/actions.js',hash = '8398a74a35f136eaedf15a19d3898c4f59de7c53',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/App/actions.js', statementMap: { '0': { start: { line: 10, column: 2 }, end: { line: 12, column: 4 } }, '1': { start: { line: 17, column: 2 }, end: { line: 21, column: 4 } }, '2': { start: { line: 26, column: 2 }, end: { line: 29, column: 4 } } }, fnMap: { '0': { name: 'loadRepos', decl: { start: { line: 9, column: 16 }, end: { line: 9, column: 25 } }, loc: { start: { line: 9, column: 28 }, end: { line: 13, column: 1 } }, line: 9 }, '1': { name: 'reposLoaded', decl: { start: { line: 16, column: 16 }, end: { line: 16, column: 27 } }, loc: { start: { line: 16, column: 45 }, end: { line: 22, column: 1 } }, line: 16 }, '2': { name: 'repoLoadingError', decl: { start: { line: 25, column: 16 }, end: { line: 25, column: 32 } }, loc: { start: { line: 25, column: 40 }, end: { line: 30, column: 1 } }, line: 25 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.
+
+
+
+
+
+
+
+loadRepos = loadRepos; /* istanbul ignore next */exports.
+
+
+
+
+
+
+reposLoaded = reposLoaded; /* istanbul ignore next */exports.
+
+
+
+
+
+
+
+
+repoLoadingError = repoLoadingError;var /* istanbul ignore next */_constants = require('./constants');function loadRepos() {/* istanbul ignore next */++cov_1ilihjyynm.f[0];++cov_1ilihjyynm.s[0];return { type: /* istanbul ignore next */_constants.LOAD_REPOS };}function reposLoaded(repos, username) {/* istanbul ignore next */++cov_1ilihjyynm.f[1];++cov_1ilihjyynm.s[1];return { type: /* istanbul ignore next */_constants.LOAD_REPOS_SUCCESS, repos: repos, username: username };}function repoLoadingError(error) {/* istanbul ignore next */++cov_1ilihjyynm.f[2];++cov_1ilihjyynm.s[2];
+  return {
+    type: /* istanbul ignore next */_constants.LOAD_REPOS_ERROR,
+    error: error };
+
+}

@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });
+
+
+
+
+var /* istanbul ignore next */_reactIntl = require('react-intl'); /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactIntl.defineMessages)({
+  header: {
+    id: 'app.components.HomePage.header',
+    defaultMessage: 'This is HomePage component!' } }); /*
+                                                         * HomePage Messages
+                                                         *
+                                                         * This contains all the text for the HomePage component.
+                                                         */

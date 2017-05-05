@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default =
+
+
+
+
+
+
+
+
+
+
+
+NotFound;var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);var /* istanbul ignore next */_reactIntl = require('react-intl');var /* istanbul ignore next */_H = require('components/H1'); /* istanbul ignore next */var _H2 = _interopRequireDefault(_H);var /* istanbul ignore next */_messages = require('./messages'); /* istanbul ignore next */var _messages2 = _interopRequireDefault(_messages);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * NotFoundPage
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * This is the page we show when the user visits a url that doesn't have a route
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   */function NotFound() {return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_H2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.header))));
+
+
+
+}

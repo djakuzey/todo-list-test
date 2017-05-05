@@ -1,0 +1,27 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1kirb06k16 = function () {var path = '/var/www/to do list/app/containers/HomePage/messages.js',hash = 'bdadfbd981c4c5bdfe2dcb03fc428c461a7135f6',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/HomePage/messages.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}(); /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * HomePage Messages
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * This contains all the text for the HomePage component.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */
+var /* istanbul ignore next */_reactIntl = require('react-intl'); /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactIntl.defineMessages)({
+  startProjectHeader: {
+    id: 'boilerplate.containers.HomePage.start_project.header',
+    defaultMessage: 'Start your next react project in seconds' },
+
+  startProjectMessage: {
+    id: 'boilerplate.containers.HomePage.start_project.message',
+    defaultMessage: 'A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices' },
+
+  trymeHeader: {
+    id: 'boilerplate.containers.HomePage.tryme.header',
+    defaultMessage: 'Try me!' },
+
+  trymeMessage: {
+    id: 'boilerplate.containers.HomePage.tryme.message',
+    defaultMessage: 'Show Github repositories by' },
+
+  trymeAtPrefix: {
+    id: 'boilerplate.containers.HomePage.tryme.atPrefix',
+    defaultMessage: '@' } });

@@ -1,0 +1,26 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2gk561kvn9 = function () {var path = '/var/www/to do list/app/components/Button/buttonStyles.js',hash = '72764caac051b4d5412a0bda255a7247e0be7c6a',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/Button/buttonStyles.js', statementMap: { '0': { start: { line: 3, column: 21 }, end: { line: 24, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  display: inline-block;\n  box-sizing: border-box;\n  padding: 0.25em 2em;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-font-smoothing: antialiased;\n  -webkit-touch-callout: none;\n  user-select: none;\n  cursor: pointer;\n  outline: 0;\n  font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  font-weight: bold;\n  font-size: 16px;\n  border: 2px solid #41addd;\n  color: #41addd;\n\n  &:active {\n    background: #41addd;\n    color: #fff;\n  }\n'], ['\n  display: inline-block;\n  box-sizing: border-box;\n  padding: 0.25em 2em;\n  text-decoration: none;\n  border-radius: 4px;\n  -webkit-font-smoothing: antialiased;\n  -webkit-touch-callout: none;\n  user-select: none;\n  cursor: pointer;\n  outline: 0;\n  font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif;\n  font-weight: bold;\n  font-size: 16px;\n  border: 2px solid #41addd;\n  color: #41addd;\n\n  &:active {\n    background: #41addd;\n    color: #fff;\n  }\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var buttonStyles = /* istanbul ignore next */(++cov_2gk561kvn9.s[0], (0, _styledComponents.css)(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+buttonStyles;

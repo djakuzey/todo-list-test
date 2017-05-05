@@ -1,0 +1,8 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_uxegt22uc = function () {var path = '/var/www/to do list/app/containers/HomePage/AtPrefix.js',hash = 'ff5d8191f2027056268a5ad622edc64bb72558a3',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/HomePage/AtPrefix.js', statementMap: { '0': { start: { line: 3, column: 17 }, end: { line: 6, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  color: black;\n  margin-left: 0.4em;\n'], ['\n  color: black;\n  margin-left: 0.4em;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var AtPrefix = /* istanbul ignore next */(++cov_uxegt22uc.s[0], /* istanbul ignore next */_styledComponents2.default.span(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+AtPrefix;

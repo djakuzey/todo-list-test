@@ -1,0 +1,51 @@
+/* istanbul ignore next */'use strict';var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;}; /**
+                                                                                                                                                                                                                                                                                                * Testing our link component
+                                                                                                                                                                                                                                                                                                */
+
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var href = 'http://mxstbr.com/';
+var children = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null, /* istanbul ignore next */'Test');
+var renderComponent = function renderComponent() /* istanbul ignore next */{var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};return (/* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */_extends({ href: href }, props),
+      children)));};
+
+
+
+describe('<A />', function () {
+  it('should render an <a> tag', function () {
+    var renderedComponent = renderComponent();
+    expect(renderedComponent.type()).toEqual('a');
+  });
+
+  it('should have an href attribute', function () {
+    var renderedComponent = renderComponent();
+    expect(renderedComponent.prop('href')).toEqual(href);
+  });
+
+  it('should have children', function () {
+    var renderedComponent = renderComponent();
+    expect(renderedComponent.contains(children)).toEqual(true);
+  });
+
+  it('should have a className attribute', function () {
+    var className = 'test';
+    var renderedComponent = renderComponent({ className: className });
+    expect(renderedComponent.find('a').hasClass(className)).toEqual(true);
+  });
+
+  it('should adopt a target attribute', function () {
+    var target = '_blank';
+    var renderedComponent = renderComponent({ target: target });
+    expect(renderedComponent.prop('target')).toEqual(target);
+  });
+
+  it('should adopt a type attribute', function () {
+    var type = 'text/html';
+    var renderedComponent = renderComponent({ type: type });
+    expect(renderedComponent.prop('type')).toEqual(type);
+  });
+});

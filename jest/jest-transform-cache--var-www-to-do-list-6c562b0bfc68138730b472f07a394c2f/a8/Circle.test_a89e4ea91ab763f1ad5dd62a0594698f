@@ -1,0 +1,22 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_Circle = require('../Circle'); /* istanbul ignore next */var _Circle2 = _interopRequireDefault(_Circle);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<Circle />', function () {
+  it('should render an <div> tag', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */null));
+    expect(renderedComponent.find('div').length).toEqual(1);
+  });
+
+  it('should have a className attribute', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */null));
+    expect(renderedComponent.find('div').prop('className')).toBeDefined();
+  });
+
+  it('should not adopt attributes', function () {
+    var id = 'test';
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ id: id }));
+    expect(renderedComponent.find('div').prop('id')).toBeUndefined();
+  });
+});

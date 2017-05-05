@@ -1,0 +1,25 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_ListItem = require('components/ListItem'); /* istanbul ignore next */var _ListItem2 = _interopRequireDefault(_ListItem);
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<List />', function () {
+  it('should render the component if no items are passed', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.render)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ component: /* istanbul ignore next */_ListItem2.default }));
+
+    expect(renderedComponent.find( /* istanbul ignore next */_ListItem2.default)).toBeDefined();
+  });
+
+  it('should render the items', function () {
+    var items = [
+    'Hello',
+    'World'];
+
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.render)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ items: items, component: /* istanbul ignore next */_ListItem2.default }));
+
+    expect(renderedComponent.find(items)).toBeDefined();
+  });
+});

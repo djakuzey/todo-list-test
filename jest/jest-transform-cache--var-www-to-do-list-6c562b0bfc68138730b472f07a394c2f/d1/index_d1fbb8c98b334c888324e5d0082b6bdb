@@ -1,0 +1,19 @@
+/* istanbul ignore next */"use strict";Object.defineProperty(exports, "__esModule", { value: true });var cov_8kz3z27ob = function () {var path = "/var/www/to do list/app/components/IssueIcon/index.js",hash = "3dbcf1df13650ba2bacbbae252523c1299a26aff",global = new Function('return this')(),gcv = "__coverage__",coverageData = { path: "/var/www/to do list/app/components/IssueIcon/index.js", statementMap: { "0": { start: { line: 4, column: 2 }, end: { line: 12, column: 4 } }, "1": { start: { line: 15, column: 0 }, end: { line: 17, column: 2 } } }, fnMap: { "0": { name: "IssueIcon", decl: { start: { line: 3, column: 9 }, end: { line: 3, column: 18 } }, loc: { start: { line: 3, column: 26 }, end: { line: 13, column: 1 } }, line: 3 } }, branchMap: {}, s: { "0": 0, "1": 0 }, f: { "0": 0 }, b: {}, _coverageSchema: "332fd63041d2c1bcb487cc26dd0d5f7d97098a6c" },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require("react"); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function IssueIcon(props) {/* istanbul ignore next */++cov_8kz3z27ob.f[0];++cov_8kz3z27ob.s[0];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"svg", /* istanbul ignore next */{
+        height: "1em",
+        width: "0.875em",
+        className: props.className },
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"path", /* istanbul ignore next */{ d: "M7 2.3c3.14 0 5.7 2.56 5.7 5.7S10.14 13.7 7 13.7 1.3 11.14 1.3 8s2.56-5.7 5.7-5.7m0-1.3C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7S10.86 1 7 1z m1 3H6v5h2V4z m0 6H6v2h2V10z" })));
+
+
+} /* istanbul ignore next */++cov_8kz3z27ob.s[1];
+
+IssueIcon.propTypes = {
+  className: /* istanbul ignore next */_react2.default.PropTypes.string }; /* istanbul ignore next */exports.default =
+
+
+IssueIcon;

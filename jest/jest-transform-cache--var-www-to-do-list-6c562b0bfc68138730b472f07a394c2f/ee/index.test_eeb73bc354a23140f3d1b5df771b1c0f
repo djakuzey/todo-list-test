@@ -1,0 +1,28 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<Toggle />', function () {
+  it('should contain default text', function () {
+    var defaultEnMessage = 'someContent';
+    var defaultDeMessage = 'someOtherContent';
+    var messages = /* istanbul ignore next */(0, _reactIntl.defineMessages)({
+      en: {
+        id: 'boilerplate.containers.LocaleToggle.en',
+        defaultMessage: defaultEnMessage },
+
+      de: {
+        id: 'boilerplate.containers.LocaleToggle.en',
+        defaultMessage: defaultDeMessage } });
+
+
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'en' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ values: ['en', 'de'], messages: messages })));
+
+
+    expect(renderedComponent.contains( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ values: ['en', 'de'], messages: messages }))).toBe(true);
+  });
+});

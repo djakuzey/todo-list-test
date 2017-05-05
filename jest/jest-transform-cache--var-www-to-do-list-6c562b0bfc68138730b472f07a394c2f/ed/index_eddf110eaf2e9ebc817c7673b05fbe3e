@@ -1,0 +1,30 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_149qm2r0at = function () {var path = '/var/www/to do list/app/components/Toggle/index.js',hash = '86152a2da545d8e0f3e839bd636e36c67759c09c',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/Toggle/index.js', statementMap: { '0': { start: { line: 7, column: 17 }, end: { line: 7, column: 36 } }, '1': { start: { line: 10, column: 2 }, end: { line: 14, column: 3 } }, '2': { start: { line: 11, column: 4 }, end: { line: 13, column: 7 } }, '3': { start: { line: 12, column: 6 }, end: { line: 12, column: 80 } }, '4': { start: { line: 16, column: 2 }, end: { line: 20, column: 4 } }, '5': { start: { line: 23, column: 0 }, end: { line: 28, column: 2 } } }, fnMap: { '0': { name: 'Toggle', decl: { start: { line: 6, column: 9 }, end: { line: 6, column: 15 } }, loc: { start: { line: 6, column: 23 }, end: { line: 21, column: 1 } }, line: 6 }, '1': { name: '(anonymous_1)', decl: { start: { line: 11, column: 31 }, end: { line: 11, column: 32 } }, loc: { start: { line: 12, column: 6 }, end: { line: 12, column: 80 } }, line: 12 } }, branchMap: { '0': { loc: { start: { line: 10, column: 2 }, end: { line: 14, column: 3 } }, type: 'if', locations: [{ start: { line: 10, column: 2 }, end: { line: 14, column: 3 } }, { start: { line: 10, column: 2 }, end: { line: 14, column: 3 } }], line: 10 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_Select = require('./Select'); /* istanbul ignore next */var _Select2 = _interopRequireDefault(_Select);
+var /* istanbul ignore next */_ToggleOption = require('../ToggleOption'); /* istanbul ignore next */var _ToggleOption2 = _interopRequireDefault(_ToggleOption);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function Toggle(props) {/* istanbul ignore next */++cov_149qm2r0at.f[0];
+  var content = /* istanbul ignore next */(++cov_149qm2r0at.s[0], /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'option', /* istanbul ignore next */null, /* istanbul ignore next */'--'));
+
+  // If we have items, render them
+  /* istanbul ignore next */++cov_149qm2r0at.s[1];if (props.values) {/* istanbul ignore next */++cov_149qm2r0at.b[0][0];++cov_149qm2r0at.s[2];
+    content = props.values.map(function (value)
+    {/* istanbul ignore next */++cov_149qm2r0at.f[1];++cov_149qm2r0at.s[3];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ToggleOption2.default, /* istanbul ignore next */{ key: value, value: value, message: props.messages[value] }));});
+
+  } else /* istanbul ignore next */{++cov_149qm2r0at.b[0][1];}++cov_149qm2r0at.s[4];
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Select2.default, /* istanbul ignore next */{ value: props.value, onChange: props.onToggle },
+      content));
+
+
+} /* istanbul ignore next */++cov_149qm2r0at.s[5];
+
+Toggle.propTypes = {
+  onToggle: /* istanbul ignore next */_react2.default.PropTypes.func,
+  values: /* istanbul ignore next */_react2.default.PropTypes.array,
+  value: /* istanbul ignore next */_react2.default.PropTypes.string,
+  messages: /* istanbul ignore next */_react2.default.PropTypes.object }; /* istanbul ignore next */exports.default =
+
+
+Toggle;

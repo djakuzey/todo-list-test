@@ -1,0 +1,27 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_reducer = require('../reducer'); /* istanbul ignore next */var _reducer2 = _interopRequireDefault(_reducer);
+var /* istanbul ignore next */_actions = require('../actions'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+
+
+describe('homeReducer', function () {
+  var state = /* istanbul ignore next */void 0;
+  beforeEach(function () {
+    state = /* istanbul ignore next */(0, _immutable.fromJS)({
+      username: '' });
+
+  });
+
+  it('should return the initial state', function () {
+    var expectedResult = state;
+    expect( /* istanbul ignore next */(0, _reducer2.default)(undefined, {})).toEqual(expectedResult);
+  });
+
+  it('should handle the changeUsername action correctly', function () {
+    var fixture = 'mxstbr';
+    var expectedResult = state.set('username', fixture);
+
+    expect( /* istanbul ignore next */(0, _reducer2.default)(state, /* istanbul ignore next */(0, _actions.changeUsername)(fixture))).toEqual(expectedResult);
+  });
+});

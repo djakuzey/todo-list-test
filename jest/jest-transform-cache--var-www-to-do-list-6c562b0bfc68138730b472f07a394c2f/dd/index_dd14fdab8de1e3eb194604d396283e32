@@ -1,0 +1,84 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1gzz42sf0o = function () {var path = '/var/www/to do list/app/containers/FeaturePage/index.js',hash = '8d5cbf7838c8718175162710670daf505db68ac9',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/FeaturePage/index.js', statementMap: { '0': { start: { line: 21, column: 4 }, end: { line: 21, column: 17 } }, '1': { start: { line: 25, column: 4 }, end: { line: 83, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 20, column: 2 }, end: { line: 20, column: 3 } }, loc: { start: { line: 20, column: 26 }, end: { line: 22, column: 3 } }, line: 20 }, '1': { name: '(anonymous_1)', decl: { start: { line: 24, column: 2 }, end: { line: 24, column: 3 } }, loc: { start: { line: 24, column: 11 }, end: { line: 84, column: 3 } }, line: 24 } }, branchMap: {}, s: { '0': 0, '1': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
+
+
+
+
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactHelmet = require('react-helmet'); /* istanbul ignore next */var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_H = require('components/H1'); /* istanbul ignore next */var _H2 = _interopRequireDefault(_H);
+var /* istanbul ignore next */_messages = require('./messages'); /* istanbul ignore next */var _messages2 = _interopRequireDefault(_messages);
+var /* istanbul ignore next */_List = require('./List'); /* istanbul ignore next */var _List2 = _interopRequireDefault(_List);
+var /* istanbul ignore next */_ListItem = require('./ListItem'); /* istanbul ignore next */var _ListItem2 = _interopRequireDefault(_ListItem);
+var /* istanbul ignore next */_ListItemTitle = require('./ListItemTitle'); /* istanbul ignore next */var _ListItemTitle2 = _interopRequireDefault(_ListItemTitle);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * FeaturePage
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * List all the features
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */var FeaturePage = function (_React$Component) {_inherits(FeaturePage, _React$Component);function FeaturePage() {_classCallCheck(this, FeaturePage);return _possibleConstructorReturn(this, (FeaturePage.__proto__ || Object.getPrototypeOf(FeaturePage)).apply(this, arguments));}_createClass(FeaturePage, [{ key: 'shouldComponentUpdate', // eslint-disable-line react/prefer-stateless-function
+    // Since state and props are static,
+    // there's no need to re-render this component
+    value: function shouldComponentUpdate() {/* istanbul ignore next */++cov_1gzz42sf0o.f[0];++cov_1gzz42sf0o.s[0];return false;
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_1gzz42sf0o.f[1];++cov_1gzz42sf0o.s[1];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactHelmet2.default, /* istanbul ignore next */{
+            title: 'Feature Page',
+            meta: [
+            { name: 'description', content: 'Feature page of React.js Boilerplate application' }] }),
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_H2.default, /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.header)),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItemTitle2.default, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.scaffoldingHeader)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.scaffoldingMessage))),
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItemTitle2.default, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.feedbackHeader)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.feedbackMessage))),
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItemTitle2.default, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.routingHeader)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.routingMessage))),
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItemTitle2.default, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.networkHeader)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.networkMessage))),
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItemTitle2.default, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.intlHeader)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.intlMessage))))));
+
+
+
+
+
+    } }]);return FeaturePage;}( /* istanbul ignore next */_react2.default.Component); /* istanbul ignore next */exports.default = FeaturePage;

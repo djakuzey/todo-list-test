@@ -1,0 +1,102 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_sinon = require('sinon'); /* istanbul ignore next */var _sinon2 = _interopRequireDefault(_sinon);
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);
+var /* istanbul ignore next */_ProgressBar = require('../ProgressBar'); /* istanbul ignore next */var _ProgressBar2 = _interopRequireDefault(_ProgressBar);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var clock = null;
+
+describe('withProgressBar()', function () {
+  beforeEach(function () {
+    clock = /* istanbul ignore next */_sinon2.default.useFakeTimers();
+  });
+
+  afterEach(function () {
+    clock = /* istanbul ignore next */_sinon2.default.restore();
+  });
+
+  function Component() {
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null));
+
+  }
+
+  var router = {
+    listenBefore: function /* istanbul ignore next */listenBefore() /* istanbul ignore next */{return function () {};} };
+
+
+  var HocComponent = /* istanbul ignore next */(0, _index2.default)(Component);
+
+  it('Should exist', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */null));
+
+
+    expect(renderedComponent.find(Component).length).toBe(1);
+  });
+
+  it('Should render <ProgressBar />', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */null));
+
+
+    expect(renderedComponent.find( /* istanbul ignore next */_ProgressBar2.default).length).toBe(1);
+  });
+
+  it('Should initially have state.progress = -1', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */null));
+
+
+    expect(renderedComponent.state().progress).toBe(-1);
+  });
+
+  it('Should initially have state.loadedRoutes = current route', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */{ location: { pathname: '/' } }));
+
+
+    expect(renderedComponent.state().loadedRoutes[0]).toBe('/');
+  });
+
+  it('Should listen to route changes', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */{ location: { pathname: '/' }, router: router }));
+
+
+    var inst = renderedComponent.instance();
+    expect(inst.unsubscribeHistory).toBeTruthy();
+  });
+
+  it('Should unset listener when unmounted', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */{ location: { pathname: '/' }, router: router }));
+
+
+    var inst = renderedComponent.instance();
+    inst.componentWillUnmount();
+    expect(inst.unsubscribeHistory).toBeFalsy();
+  });
+
+  it('Should update state.progress when called updateProgress()', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */{ location: { pathname: '/' }, router: router }));
+
+
+    var inst = renderedComponent.instance();
+    inst.updateProgress(10);
+    expect(renderedComponent.state().progress).toBe(10);
+  });
+
+  it('Should start progress bar for a new route', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement(HocComponent, /* istanbul ignore next */{ location: { pathname: '/' }, router: router }));
+
+
+    renderedComponent.setState({ loadedRoutes: [], progress: 10 });
+    renderedComponent.setProps({ location: { pathname: '/abc' }, router: router });
+    clock.tick(10);
+    expect(renderedComponent.state().progress).toBe(100);
+  });
+});

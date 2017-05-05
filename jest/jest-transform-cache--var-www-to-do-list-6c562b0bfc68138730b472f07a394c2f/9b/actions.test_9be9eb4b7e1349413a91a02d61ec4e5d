@@ -1,0 +1,97 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_constants = require('../constants');
+
+
+
+
+
+
+
+
+var /* istanbul ignore next */_actions = require('../actions');
+
+
+
+
+
+
+
+
+describe('ToDoList Actions', function () {
+  describe('addTask', function () {
+    it('should return the correct type and the passed title', function () {
+      var titleTest = 'test';
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.ADD_TASK,
+        title: titleTest };
+
+
+      expect( /* istanbul ignore next */(0, _actions.addTask)(titleTest)).toEqual(expectedResult);
+    });
+  });
+
+  describe('deleteTask', function () {
+    it('should return the correct type and the passed id of task', function () {
+      var idTest = 0;
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.DELETE_TASK,
+        id: idTest };
+
+
+      expect( /* istanbul ignore next */(0, _actions.deleteTask)(idTest)).toEqual(expectedResult);
+    });
+  });
+
+  describe('toggleTask', function () {
+    it('should return the correct type and the passed id of task', function () {
+      var idTest = 0;
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.TOGGLE_TASK,
+        id: idTest };
+
+
+      expect( /* istanbul ignore next */(0, _actions.toggleTask)(idTest)).toEqual(expectedResult);
+    });
+  });
+
+  describe('addSubTask', function () {
+    it('should return the correct type and the passed id of task and title of subtask', function () {
+      var subTaskTitle = 'test';
+      var taskId = 0;
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.ADD_SUB_TASK,
+        taskId: taskId,
+        subTaskTitle: subTaskTitle };
+
+
+      expect( /* istanbul ignore next */(0, _actions.addSubTask)(taskId, subTaskTitle)).toEqual(expectedResult);
+    });
+  });
+
+  describe('deleteSubTask', function () {
+    it('should return the correct type and the passed id of task and id of subtask', function () {
+      var idTest = 0;
+      var secondIdTest = 0;
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.DELETE_SUB_TASK,
+        idTest: idTest,
+        secondIdTest: secondIdTest };
+
+
+      expect( /* istanbul ignore next */(0, _actions.deleteSubTask)(idTest, secondIdTest)).toEqual(expectedResult);
+    });
+  });
+
+  describe('toggleSubTask', function () {
+    it('should return the correct type and the passed id of task and id of subtask', function () {
+      var idTest = 0;
+      var secondIdTest = 0;
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.TOGGLE_SUB_TASK,
+        idTest: idTest,
+        secondIdTest: secondIdTest };
+
+
+      expect( /* istanbul ignore next */(0, _actions.toggleSubTask)(idTest, secondIdTest)).toEqual(expectedResult);
+    });
+  });
+});

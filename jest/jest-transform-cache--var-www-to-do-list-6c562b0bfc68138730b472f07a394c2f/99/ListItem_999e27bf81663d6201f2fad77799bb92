@@ -1,0 +1,7 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_itnz1jwwc = function () {var path = '/var/www/to do list/app/containers/FeaturePage/ListItem.js',hash = '36792ebb7dcdb8da328f85679246f5cf777395db',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/FeaturePage/ListItem.js', statementMap: { '0': { start: { line: 3, column: 17 }, end: { line: 5, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  margin: 1em 0;\n'], ['\n  margin: 1em 0;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var ListItem = /* istanbul ignore next */(++cov_itnz1jwwc.s[0], /* istanbul ignore next */_styledComponents2.default.li(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+ListItem;

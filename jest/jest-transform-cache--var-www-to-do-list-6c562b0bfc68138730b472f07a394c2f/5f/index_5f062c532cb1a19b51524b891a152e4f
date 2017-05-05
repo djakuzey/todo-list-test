@@ -1,0 +1,23 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_12zafzfw6w = function () {var path = '/var/www/to do list/app/components/LoadingIndicator/index.js',hash = '95aab2c225e1a7870bbf27a9350a11e1c800944e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/LoadingIndicator/index.js', statementMap: { '0': { start: { line: 6, column: 25 }, end: { line: 21, column: 1 } }, '1': { start: { line: 7, column: 2 }, end: { line: 20, column: 12 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 25 }, end: { line: 6, column: 26 } }, loc: { start: { line: 7, column: 2 }, end: { line: 20, column: 12 } }, line: 7 } }, branchMap: {}, s: { '0': 0, '1': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_Circle = require('./Circle'); /* istanbul ignore next */var _Circle2 = _interopRequireDefault(_Circle);
+var /* istanbul ignore next */_Wrapper = require('./Wrapper'); /* istanbul ignore next */var _Wrapper2 = _interopRequireDefault(_Wrapper);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_12zafzfw6w.s[0];
+
+var LoadingIndicator = function LoadingIndicator()
+{/* istanbul ignore next */++cov_12zafzfw6w.f[0];++cov_12zafzfw6w.s[1];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */null),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 30, delay: -1.1 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 60, delay: -1 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 90, delay: -0.9 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 120, delay: -0.8 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 150, delay: -0.7 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 180, delay: -0.6 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 210, delay: -0.5 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 240, delay: -0.4 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 270, delay: -0.3 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 300, delay: -0.2 }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Circle2.default, /* istanbul ignore next */{ rotate: 330, delay: -0.1 })));
+}; /* istanbul ignore next */exports.default =
+
+
+LoadingIndicator;

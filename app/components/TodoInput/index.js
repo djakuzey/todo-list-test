@@ -25,6 +25,7 @@ export default class TodoInput extends React.Component {
 
 		if (this.state.text.length > 0)
 			this.props.addTask(this.state.text);
+		
 		this.setState({
 			text: ''
 		})

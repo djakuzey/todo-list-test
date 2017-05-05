@@ -1,0 +1,16 @@
+// import React from 'react';
+// import { mount, shallow } from 'enzyme';
+
+// import Task from '../Task';
+// import { TodoList } from '../index';
+
+// describe('<TodoList />', () => {
+//   it('should render the tasklist by items', () => {
+//     const renderedComponent = mount(
+//       <ToDoList />
+//     );
+//     expect(renderedComponent.find(TodoInput).length).toBe(1);
+//   });
+
+// });
+/* istanbul ignore next */"use strict";

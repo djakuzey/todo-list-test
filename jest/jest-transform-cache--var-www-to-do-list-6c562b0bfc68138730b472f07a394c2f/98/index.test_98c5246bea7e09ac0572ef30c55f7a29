@@ -1,0 +1,78 @@
+/* istanbul ignore next */'use strict';
+
+
+
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_ReposList = require('components/ReposList'); /* istanbul ignore next */var _ReposList2 = _interopRequireDefault(_ReposList);
+var /* istanbul ignore next */_index = require('../index');
+var /* istanbul ignore next */_actions = require('../actions');
+var /* istanbul ignore next */_actions2 = require('../../App/actions'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<HomePage />', function () {
+  it('should render the repos list', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index.HomePage, /* istanbul ignore next */{ loading: /* istanbul ignore next */true, error: false, repos: [] }));
+
+    expect(renderedComponent.contains( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ReposList2.default, /* istanbul ignore next */{ loading: /* istanbul ignore next */true, error: false, repos: [] }))).toEqual(true);
+  });
+
+  it('should render fetch the repos on mount if a username exists', function () {
+    var submitSpy = jest.fn();
+    /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'en' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index.HomePage, /* istanbul ignore next */{
+        username: 'Not Empty',
+        onChangeUsername: function /* istanbul ignore next */onChangeUsername() {},
+        onSubmitForm: submitSpy })));
+
+
+
+    expect(submitSpy).toHaveBeenCalled();
+  });
+
+  describe('mapDispatchToProps', function () {
+    describe('onChangeUsername', function () {
+      it('should be injected', function () {
+        var dispatch = jest.fn();
+        var result = /* istanbul ignore next */(0, _index.mapDispatchToProps)(dispatch);
+        expect(result.onChangeUsername).toBeDefined();
+      });
+
+      it('should dispatch changeUsername when called', function () {
+        var dispatch = jest.fn();
+        var result = /* istanbul ignore next */(0, _index.mapDispatchToProps)(dispatch);
+        var username = 'mxstbr';
+        result.onChangeUsername({ target: { value: username } });
+        expect(dispatch).toHaveBeenCalledWith( /* istanbul ignore next */(0, _actions.changeUsername)(username));
+      });
+    });
+  });
+
+  describe('onSubmitForm', function () {
+    it('should be injected', function () {
+      var dispatch = jest.fn();
+      var result = /* istanbul ignore next */(0, _index.mapDispatchToProps)(dispatch);
+      expect(result.onSubmitForm).toBeDefined();
+    });
+
+    it('should dispatch loadRepos when called', function () {
+      var dispatch = jest.fn();
+      var result = /* istanbul ignore next */(0, _index.mapDispatchToProps)(dispatch);
+      result.onSubmitForm();
+      expect(dispatch).toHaveBeenCalledWith( /* istanbul ignore next */(0, _actions2.loadRepos)());
+    });
+
+    it('should preventDefault if called with event', function () {
+      var preventDefault = jest.fn();
+      var result = /* istanbul ignore next */(0, _index.mapDispatchToProps)(function () {});
+      var evt = { preventDefault: preventDefault };
+      result.onSubmitForm(evt);
+      expect(preventDefault).toHaveBeenCalledWith();
+    });
+  });
+}); /**
+     * Test the HomePage
+     */

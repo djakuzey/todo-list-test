@@ -1,0 +1,34 @@
+/* istanbul ignore next */'use strict';var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_A = require('components/A'); /* istanbul ignore next */var _A2 = _interopRequireDefault(_A);
+var /* istanbul ignore next */_messages = require('../messages'); /* istanbul ignore next */var _messages2 = _interopRequireDefault(_messages);
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<Footer />', function () {
+  it('should render the copyright notice', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */null));
+
+    expect(renderedComponent.contains(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.licenseMessage)))).
+
+    toBe(true);
+  });
+
+  it('should render the credits', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */null));
+    expect(renderedComponent.contains(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_extends({},
+      /* istanbul ignore next */_messages2.default.authorMessage, {
+        values: {
+          author: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_A2.default, /* istanbul ignore next */{ href: 'https://twitter.com/mxstbr' }, /* istanbul ignore next */'Max Stoiber') } }))))).
+
+
+
+    toBe(true);
+  });
+});

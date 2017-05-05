@@ -1,0 +1,71 @@
+/* istanbul ignore next */'use strict';
+
+
+
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_ListItem = require('components/ListItem'); /* istanbul ignore next */var _ListItem2 = _interopRequireDefault(_ListItem);
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var renderComponent = function renderComponent() /* istanbul ignore next */{var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};return (/* istanbul ignore next */(0, _enzyme.render)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'en' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index.RepoListItem, props))));}; /**
+                                                                                                                            * Test the repo list item
+                                                                                                                            */
+
+describe('<RepoListItem />', function () {
+  var item = /* istanbul ignore next */void 0;
+
+  // Before each test reset the item data for safety
+  beforeEach(function () {
+    item = {
+      owner: {
+        login: 'mxstbr' },
+
+      html_url: 'https://github.com/react-boilerplate/react-boilerplate',
+      name: 'react-boilerplate',
+      open_issues_count: 20,
+      full_name: 'react-boilerplate/react-boilerplate' };
+
+  });
+
+  it('should render a ListItem', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index.RepoListItem, /* istanbul ignore next */{ item: item }));
+
+    expect(renderedComponent.find( /* istanbul ignore next */_ListItem2.default).length).toBe(1);
+  });
+
+  it('should not render the current username', function () {
+    var renderedComponent = renderComponent({
+      item: item,
+      currentUser: item.owner.login });
+
+    expect(renderedComponent.text()).not.toContain(item.owner.login);
+  });
+
+  it('should render usernames that are not the current one', function () {
+    var renderedComponent = renderComponent({
+      item: item,
+      currentUser: 'nikgraf' });
+
+    expect(renderedComponent.text()).toContain(item.owner.login);
+  });
+
+  it('should render the repo name', function () {
+    var renderedComponent = renderComponent({ item: item });
+    expect(renderedComponent.text()).toContain(item.name);
+  });
+
+  it('should render the issue count', function () {
+    var renderedComponent = renderComponent({ item: item });
+    expect(renderedComponent.text()).toContain(item.open_issues_count);
+  });
+
+  it('should render the IssueIcon', function () {
+    var renderedComponent = renderComponent({ item: item });
+    expect(renderedComponent.find('svg').length).toBe(1);
+  });
+});

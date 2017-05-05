@@ -1,0 +1,27 @@
+/* istanbul ignore next */'use strict';
+
+
+
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_H = require('components/H1'); /* istanbul ignore next */var _H2 = _interopRequireDefault(_H);
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<NotFound />', function () {
+  it('should render the Page Not Found text', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */null));
+
+    expect(renderedComponent.contains(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_H2.default, /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */{
+        id: 'boilerplate.containers.NotFoundPage.header',
+        defaultMessage: 'Page not found.' })))).
+
+    toEqual(true);
+  });
+}); /**
+     * Testing the NotFoundPage
+     */

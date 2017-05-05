@@ -1,0 +1,31 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_selectors = require('../selectors');
+
+
+
+
+describe('selectHome', function () {
+  it('should select the home state', function () {
+    var homeState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      userData: {} });
+
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      home: homeState });
+
+    expect( /* istanbul ignore next */(0, _selectors.selectHome)(mockedState)).toEqual(homeState);
+  });
+});
+
+describe('makeSelectUsername', function () {
+  var usernameSelector = /* istanbul ignore next */(0, _selectors.makeSelectUsername)();
+  it('should select the username', function () {
+    var username = 'mxstbr';
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      home: {
+        username: username } });
+
+
+    expect(usernameSelector(mockedState)).toEqual(username);
+  });
+});

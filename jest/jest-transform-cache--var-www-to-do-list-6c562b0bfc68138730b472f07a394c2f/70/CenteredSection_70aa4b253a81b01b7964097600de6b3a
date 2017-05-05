@@ -1,0 +1,9 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2jqv6wr7au = function () {var path = '/var/www/to do list/app/containers/HomePage/CenteredSection.js',hash = '8e6554dc5d6341bae89b15c59668cd1a2473da28',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/HomePage/CenteredSection.js', statementMap: { '0': { start: { line: 5, column: 24 }, end: { line: 7, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  text-align: center;\n'], ['\n  text-align: center;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var /* istanbul ignore next */_Section = require('./Section'); /* istanbul ignore next */var _Section2 = _interopRequireDefault(_Section);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var CenteredSection = /* istanbul ignore next */(++cov_2jqv6wr7au.s[0], /* istanbul ignore next */(0, _styledComponents2.default)( /* istanbul ignore next */_Section2.default)(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+CenteredSection;

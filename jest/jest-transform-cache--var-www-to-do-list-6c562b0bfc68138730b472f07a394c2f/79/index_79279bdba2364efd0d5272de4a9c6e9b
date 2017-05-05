@@ -1,0 +1,77 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.ToDoList = undefined;var cov_sp17ynm06 = function () {var path = '/var/www/to do list/app/containers/ToDoList/index.js',hash = 'ebf99734f0544b89943ffd1a1e7e1c10c141931e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/ToDoList/index.js', statementMap: { '0': { start: { line: 21, column: 4 }, end: { line: 21, column: 17 } }, '1': { start: { line: 26, column: 20 }, end: { line: 26, column: 38 } }, '2': { start: { line: 28, column: 4 }, end: { line: 41, column: 6 } }, '3': { start: { line: 45, column: 0 }, end: { line: 60, column: 2 } }, '4': { start: { line: 63, column: 2 }, end: { line: 65, column: 4 } }, '5': { start: { line: 69, column: 2 }, end: { line: 71, column: 4 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 20, column: 2 }, end: { line: 20, column: 3 } }, loc: { start: { line: 20, column: 21 }, end: { line: 23, column: 3 } }, line: 20 }, '1': { name: '(anonymous_1)', decl: { start: { line: 25, column: 2 }, end: { line: 25, column: 3 } }, loc: { start: { line: 25, column: 11 }, end: { line: 42, column: 3 } }, line: 25 }, '2': { name: 'mapStateToProps', decl: { start: { line: 62, column: 9 }, end: { line: 62, column: 24 } }, loc: { start: { line: 62, column: 32 }, end: { line: 66, column: 1 } }, line: 62 }, '3': { name: 'mapActionsToProps', decl: { start: { line: 68, column: 9 }, end: { line: 68, column: 26 } }, loc: { start: { line: 68, column: 37 }, end: { line: 72, column: 1 } }, line: 68 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_redux = require('redux');
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_reselect = require('reselect');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_TodoInput = require('components/TodoInput'); /* istanbul ignore next */var _TodoInput2 = _interopRequireDefault(_TodoInput);
+var /* istanbul ignore next */_TodoList = require('components/TodoList'); /* istanbul ignore next */var _TodoList2 = _interopRequireDefault(_TodoList);
+
+var /* istanbul ignore next */_selectors = require('containers/App/selectors');
+
+var /* istanbul ignore next */_aphrodite = require('aphrodite');
+var /* istanbul ignore next */_style = require('./style'); /* istanbul ignore next */var _style2 = _interopRequireDefault(_style);
+var /* istanbul ignore next */_reactFa = require('react-fa');
+
+var /* istanbul ignore next */_actions = require('./actions'); /* istanbul ignore next */var actions = _interopRequireWildcard(_actions); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+
+ToDoList = exports.ToDoList = function (_React$PureComponent) {_inherits(ToDoList, _React$PureComponent);
+  function /* istanbul ignore next */ToDoList(props) {/* istanbul ignore next */_classCallCheck(this, ToDoList);++cov_sp17ynm06.f[0];++cov_sp17ynm06.s[0];return _possibleConstructorReturn(this, (ToDoList.__proto__ || Object.getPrototypeOf(ToDoList)).call(this,
+    props));
+
+  }_createClass(ToDoList, [{ key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_sp17ynm06.f[1];
+      var actions = /* istanbul ignore next */(++cov_sp17ynm06.s[1], this.props.actions); /* istanbul ignore next */++cov_sp17ynm06.s[2];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_style2.default.todo_box) },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TodoInput2.default, /* istanbul ignore next */{ addTask: actions.addTask }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TodoList2.default, /* istanbul ignore next */{
+            taskList: this.props.tasks,
+            deleteTask: actions.deleteTask,
+            toggleTask: actions.toggleTask,
+            addSubTask: actions.addSubTask,
+            deleteSubTask: actions.deleteSubTask,
+            toggleSubTask: actions.toggleSubTask })));
+
+
+
+    } }]);return ToDoList;}( /* istanbul ignore next */_react2.default.PureComponent); /* istanbul ignore next */++cov_sp17ynm06.s[3];
+
+
+ToDoList.propTypes = {
+  tasks: /* istanbul ignore next */_react.PropTypes.arrayOf(
+  /* istanbul ignore next */_react.PropTypes.shape({
+    id: /* istanbul ignore next */_react.PropTypes.number,
+    title: /* istanbul ignore next */_react.PropTypes.string,
+    isDone: /* istanbul ignore next */_react.PropTypes.bool,
+    subtasks: /* istanbul ignore next */_react.PropTypes.arrayOf(
+    /* istanbul ignore next */_react.PropTypes.shape({
+      id: /* istanbul ignore next */_react.PropTypes.number,
+      title: /* istanbul ignore next */_react.PropTypes.string,
+      isDone: /* istanbul ignore next */_react.PropTypes.bool })) })) };
+
+
+
+
+
+
+function mapStateToProps(state) {/* istanbul ignore next */++cov_sp17ynm06.f[2];++cov_sp17ynm06.s[4];
+  return {
+    tasks: state.get('tasks') };
+
+}
+
+function mapActionsToProps(dispatch) {/* istanbul ignore next */++cov_sp17ynm06.f[3];++cov_sp17ynm06.s[5];
+  return {
+    actions: /* istanbul ignore next */(0, _redux.bindActionCreators)(actions, dispatch) };
+
+} /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(
+mapStateToProps,
+mapActionsToProps)(
+ToDoList);

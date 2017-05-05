@@ -1,0 +1,27 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_Wrapper = require('../Wrapper'); /* istanbul ignore next */var _Wrapper2 = _interopRequireDefault(_Wrapper);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<Wrapper />', function () {
+  it('should render an <div> tag', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */null));
+    expect(renderedComponent.type()).toEqual('div');
+  });
+
+  it('should have a className attribute', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */null));
+    expect(renderedComponent.prop('className')).toBeDefined();
+  });
+
+  it('should adopt a valid attribute', function () {
+    var id = 'test';
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */{ id: id }));
+    expect(renderedComponent.prop('id')).toEqual(id);
+  });
+
+  it('should not adopt an invalid attribute', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */{ attribute: 'test' }));
+    expect(renderedComponent.prop('attribute')).toBeUndefined();
+  });
+});

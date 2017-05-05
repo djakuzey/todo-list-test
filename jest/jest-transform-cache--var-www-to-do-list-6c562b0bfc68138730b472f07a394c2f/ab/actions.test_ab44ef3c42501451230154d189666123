@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_constants = require('../constants');
+
+
+
+var /* istanbul ignore next */_actions = require('../actions');
+
+
+
+describe('Home Actions', function () {
+  describe('changeUsername', function () {
+    it('should return the correct type and the passed name', function () {
+      var fixture = 'Max';
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.CHANGE_USERNAME,
+        name: fixture };
+
+
+      expect( /* istanbul ignore next */(0, _actions.changeUsername)(fixture)).toEqual(expectedResult);
+    });
+  });
+});

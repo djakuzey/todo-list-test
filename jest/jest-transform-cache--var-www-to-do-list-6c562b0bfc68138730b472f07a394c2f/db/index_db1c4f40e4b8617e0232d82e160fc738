@@ -1,0 +1,33 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_rjq9qjx6a = function () {var path = '/var/www/to do list/app/components/ReposList/index.js',hash = '59370d9346e4489bf8f38d5a95cf17c9f77b2d97',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/ReposList/index.js', statementMap: { '0': { start: { line: 9, column: 2 }, end: { line: 11, column: 3 } }, '1': { start: { line: 10, column: 4 }, end: { line: 10, column: 49 } }, '2': { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, '3': { start: { line: 14, column: 27 }, end: { line: 16, column: 5 } }, '4': { start: { line: 15, column: 6 }, end: { line: 15, column: 67 } }, '5': { start: { line: 17, column: 4 }, end: { line: 17, column: 47 } }, '6': { start: { line: 20, column: 2 }, end: { line: 22, column: 3 } }, '7': { start: { line: 21, column: 4 }, end: { line: 21, column: 59 } }, '8': { start: { line: 24, column: 2 }, end: { line: 24, column: 14 } }, '9': { start: { line: 27, column: 0 }, end: { line: 31, column: 2 } } }, fnMap: { '0': { name: 'ReposList', decl: { start: { line: 8, column: 9 }, end: { line: 8, column: 18 } }, loc: { start: { line: 8, column: 46 }, end: { line: 25, column: 1 } }, line: 8 }, '1': { name: '(anonymous_1)', decl: { start: { line: 14, column: 27 }, end: { line: 14, column: 28 } }, loc: { start: { line: 15, column: 6 }, end: { line: 15, column: 67 } }, line: 15 } }, branchMap: { '0': { loc: { start: { line: 9, column: 2 }, end: { line: 11, column: 3 } }, type: 'if', locations: [{ start: { line: 9, column: 2 }, end: { line: 11, column: 3 } }, { start: { line: 9, column: 2 }, end: { line: 11, column: 3 } }], line: 9 }, '1': { loc: { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, type: 'if', locations: [{ start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }], line: 13 }, '2': { loc: { start: { line: 20, column: 2 }, end: { line: 22, column: 3 } }, type: 'if', locations: [{ start: { line: 20, column: 2 }, end: { line: 22, column: 3 } }, { start: { line: 20, column: 2 }, end: { line: 22, column: 3 } }], line: 20 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_List = require('components/List'); /* istanbul ignore next */var _List2 = _interopRequireDefault(_List);
+var /* istanbul ignore next */_ListItem = require('components/ListItem'); /* istanbul ignore next */var _ListItem2 = _interopRequireDefault(_ListItem);
+var /* istanbul ignore next */_LoadingIndicator = require('components/LoadingIndicator'); /* istanbul ignore next */var _LoadingIndicator2 = _interopRequireDefault(_LoadingIndicator);
+var /* istanbul ignore next */_RepoListItem = require('containers/RepoListItem'); /* istanbul ignore next */var _RepoListItem2 = _interopRequireDefault(_RepoListItem);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function ReposList( /* istanbul ignore next */_ref) {/* istanbul ignore next */var loading = _ref.loading,error = _ref.error,repos = _ref.repos; /* istanbul ignore next */++cov_rjq9qjx6a.f[0];++cov_rjq9qjx6a.s[0];
+  if (loading) {/* istanbul ignore next */++cov_rjq9qjx6a.b[0][0];++cov_rjq9qjx6a.s[1];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */{ component: /* istanbul ignore next */_LoadingIndicator2.default }));
+  } else /* istanbul ignore next */{++cov_rjq9qjx6a.b[0][1];}++cov_rjq9qjx6a.s[2];
+
+  if (error !== false) {/* istanbul ignore next */++cov_rjq9qjx6a.b[1][0];++cov_rjq9qjx6a.s[3];
+    var ErrorComponent = function ErrorComponent()
+    {/* istanbul ignore next */++cov_rjq9qjx6a.f[1];++cov_rjq9qjx6a.s[4];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ListItem2.default, /* istanbul ignore next */{ item: 'Something went wrong, please try again!' }));}; /* istanbul ignore next */++cov_rjq9qjx6a.s[5];
+
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */{ component: ErrorComponent }));
+  } else /* istanbul ignore next */{++cov_rjq9qjx6a.b[1][1];}++cov_rjq9qjx6a.s[6];
+
+  if (repos !== false) {/* istanbul ignore next */++cov_rjq9qjx6a.b[2][0];++cov_rjq9qjx6a.s[7];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */{ items: repos, component: /* istanbul ignore next */_RepoListItem2.default }));
+  } else /* istanbul ignore next */{++cov_rjq9qjx6a.b[2][1];}++cov_rjq9qjx6a.s[8];
+
+  return null;
+} /* istanbul ignore next */++cov_rjq9qjx6a.s[9];
+
+ReposList.propTypes = {
+  loading: /* istanbul ignore next */_react.PropTypes.bool,
+  error: /* istanbul ignore next */_react.PropTypes.any,
+  repos: /* istanbul ignore next */_react.PropTypes.any }; /* istanbul ignore next */exports.default =
+
+
+ReposList;

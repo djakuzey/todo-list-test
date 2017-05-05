@@ -1,0 +1,87 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_immutable = require('immutable');
+
+var /* istanbul ignore next */_selectors = require('../selectors');
+
+
+
+
+
+
+
+
+describe('selectGlobal', function () {
+  it('should select the global state', function () {
+    var globalState = /* istanbul ignore next */(0, _immutable.fromJS)({});
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      global: globalState });
+
+    expect( /* istanbul ignore next */(0, _selectors.selectGlobal)(mockedState)).toEqual(globalState);
+  });
+});
+
+describe('makeSelectCurrentUser', function () {
+  var currentUserSelector = /* istanbul ignore next */(0, _selectors.makeSelectCurrentUser)();
+  it('should select the current user', function () {
+    var username = 'mxstbr';
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      global: {
+        currentUser: username } });
+
+
+    expect(currentUserSelector(mockedState)).toEqual(username);
+  });
+});
+
+describe('makeSelectLoading', function () {
+  var loadingSelector = /* istanbul ignore next */(0, _selectors.makeSelectLoading)();
+  it('should select the loading', function () {
+    var loading = false;
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      global: {
+        loading: loading } });
+
+
+    expect(loadingSelector(mockedState)).toEqual(loading);
+  });
+});
+
+describe('makeSelectError', function () {
+  var errorSelector = /* istanbul ignore next */(0, _selectors.makeSelectError)();
+  it('should select the error', function () {
+    var error = 404;
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      global: {
+        error: error } });
+
+
+    expect(errorSelector(mockedState)).toEqual(error);
+  });
+});
+
+describe('makeSelectRepos', function () {
+  var reposSelector = /* istanbul ignore next */(0, _selectors.makeSelectRepos)();
+  it('should select the repos', function () {
+    var repositories = /* istanbul ignore next */(0, _immutable.fromJS)([]);
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      global: {
+        userData: {
+          repositories: repositories } } });
+
+
+
+    expect(reposSelector(mockedState)).toEqual(repositories);
+  });
+});
+
+describe('makeSelectLocationState', function () {
+  var locationStateSelector = /* istanbul ignore next */(0, _selectors.makeSelectLocationState)();
+  it('should select the route as a plain JS object', function () {
+    var route = /* istanbul ignore next */(0, _immutable.fromJS)({
+      locationBeforeTransitions: null });
+
+    var mockedState = /* istanbul ignore next */(0, _immutable.fromJS)({
+      route: route });
+
+    expect(locationStateSelector(mockedState)).toEqual(route.toJS());
+  });
+});

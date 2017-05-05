@@ -1,0 +1,51 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2kj9kz0krv = function () {var path = '/var/www/to do list/app/components/TodoInput/index.js',hash = '450b6abf9abad7fc70aa724cc1f869d4a84db699',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/TodoInput/index.js', statementMap: { '0': { start: { line: 10, column: 2 }, end: { line: 10, column: 15 } }, '1': { start: { line: 12, column: 2 }, end: { line: 14, column: 4 } }, '2': { start: { line: 18, column: 2 }, end: { line: 20, column: 5 } }, '3': { start: { line: 24, column: 2 }, end: { line: 24, column: 25 } }, '4': { start: { line: 26, column: 2 }, end: { line: 27, column: 39 } }, '5': { start: { line: 27, column: 3 }, end: { line: 27, column: 39 } }, '6': { start: { line: 28, column: 2 }, end: { line: 30, column: 4 } }, '7': { start: { line: 34, column: 2 }, end: { line: 50, column: 4 } }, '8': { start: { line: 41, column: 26 }, end: { line: 41, column: 44 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 9, column: 1 }, end: { line: 9, column: 2 } }, loc: { start: { line: 9, column: 20 }, end: { line: 15, column: 2 } }, line: 9 }, '1': { name: '(anonymous_1)', decl: { start: { line: 17, column: 12 }, end: { line: 17, column: 13 } }, loc: { start: { line: 17, column: 21 }, end: { line: 21, column: 2 } }, line: 17 }, '2': { name: '(anonymous_2)', decl: { start: { line: 23, column: 12 }, end: { line: 23, column: 13 } }, loc: { start: { line: 23, column: 21 }, end: { line: 31, column: 2 } }, line: 23 }, '3': { name: '(anonymous_3)', decl: { start: { line: 33, column: 1 }, end: { line: 33, column: 2 } }, loc: { start: { line: 33, column: 10 }, end: { line: 51, column: 2 } }, line: 33 }, '4': { name: '(anonymous_4)', decl: { start: { line: 41, column: 17 }, end: { line: 41, column: 18 } }, loc: { start: { line: 41, column: 26 }, end: { line: 41, column: 44 } }, line: 41 } }, branchMap: { '0': { loc: { start: { line: 26, column: 2 }, end: { line: 27, column: 39 } }, type: 'if', locations: [{ start: { line: 26, column: 2 }, end: { line: 27, column: 39 } }, { start: { line: 26, column: 2 }, end: { line: 27, column: 39 } }], line: 26 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_aphrodite = require('aphrodite');
+var /* istanbul ignore next */_styles = require('./styles'); /* istanbul ignore next */var _styles2 = _interopRequireDefault(_styles);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+
+TodoInput = function (_React$Component) {_inherits(TodoInput, _React$Component);
+
+	function /* istanbul ignore next */TodoInput(props) {/* istanbul ignore next */_classCallCheck(this, TodoInput);++cov_2kj9kz0krv.f[0];++cov_2kj9kz0krv.s[0];var _this = _possibleConstructorReturn(this, (TodoInput.__proto__ || Object.getPrototypeOf(TodoInput)).call(this,
+		props)); /* istanbul ignore next */_this.
+
+
+
+
+
+
+		onChange = function (event) {/* istanbul ignore next */++cov_2kj9kz0krv.f[1];++cov_2kj9kz0krv.s[2];
+			/* istanbul ignore next */_this.setState({
+				text: /* istanbul ignore next */_this.input.value });
+
+		}; /* istanbul ignore next */_this.
+
+		onSubmit = function (event) {/* istanbul ignore next */++cov_2kj9kz0krv.f[2];++cov_2kj9kz0krv.s[3];
+			event.preventDefault(); /* istanbul ignore next */++cov_2kj9kz0krv.s[4];
+
+			if ( /* istanbul ignore next */_this.state.text.length > 0)
+				{/* istanbul ignore next */++cov_2kj9kz0krv.b[0][0];++cov_2kj9kz0krv.s[5]; /* istanbul ignore next */_this.props.addTask( /* istanbul ignore next */_this.state.text);} else /* istanbul ignore next */{++cov_2kj9kz0krv.b[0][1];}++cov_2kj9kz0krv.s[6];
+			/* istanbul ignore next */_this.setState({
+				text: '' });
+
+		}; /* istanbul ignore next */++cov_2kj9kz0krv.s[1]; /* istanbul ignore next */_this.state = { text: '' }; /* istanbul ignore next */return _this;}_createClass(TodoInput, [{ key: 'render', value: function render()
+
+		{/* istanbul ignore next */var _this2 = this;++cov_2kj9kz0krv.f[3];++cov_2kj9kz0krv.s[7];
+			return (
+				/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{
+						id: 'form',
+						className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.create_task),
+						onSubmit: this.onSubmit },
+					/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+						value: this.state.text,
+						ref: function /* istanbul ignore next */ref(input) {/* istanbul ignore next */++cov_2kj9kz0krv.f[4];++cov_2kj9kz0krv.s[8];return (/* istanbul ignore next */_this2.input = input);},
+						className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.input_text),
+						onChange: this.onChange }),
+					/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+							onClick: this.onSubmit,
+							className: /* istanbul ignore next */(0, _aphrodite.css)( /* istanbul ignore next */_styles2.default.btn_todo) }, /* istanbul ignore next */'Add tasks')));
+
+
+
+
+		} }]);return TodoInput;}( /* istanbul ignore next */_react2.default.Component); /* istanbul ignore next */exports.default = TodoInput;

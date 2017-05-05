@@ -1,0 +1,160 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_sinon = require('sinon'); /* istanbul ignore next */var _sinon2 = _interopRequireDefault(_sinon);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_ProgressBar = require('../ProgressBar'); /* istanbul ignore next */var _ProgressBar2 = _interopRequireDefault(_ProgressBar);
+var /* istanbul ignore next */_Wrapper = require('../Wrapper'); /* istanbul ignore next */var _Wrapper2 = _interopRequireDefault(_Wrapper);
+var /* istanbul ignore next */_Percent = require('../Percent'); /* istanbul ignore next */var _Percent2 = _interopRequireDefault(_Percent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var clock = null;
+
+describe('<ProgressBar />', function () {
+  beforeEach(function () {
+    clock = /* istanbul ignore next */_sinon2.default.useFakeTimers();
+  });
+
+  afterEach(function () {
+    clock = /* istanbul ignore next */_sinon2.default.restore();
+  });
+
+  it('should initially render hidden progress bar', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */null));
+
+    expect(renderedComponent.find( /* istanbul ignore next */_Wrapper2.default).length).toEqual(1);
+  });
+
+  it('should render render horizontal progress bar', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */null));
+
+    expect(renderedComponent.find( /* istanbul ignore next */_Percent2.default).length).toEqual(1);
+  });
+
+  it('should set state.percent as props.percent', function () {
+    var expected = 50;
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: expected }));
+
+    expect(renderedComponent.state().percent).toEqual(expected);
+  });
+
+  it('should call componentDidMount', function () {
+    /* istanbul ignore next */_sinon2.default.spy( /* istanbul ignore next */_ProgressBar2.default.prototype, 'componentDidMount');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    expect( /* istanbul ignore next */_ProgressBar2.default.prototype.componentDidMount.calledOnce).toEqual(true);
+    /* istanbul ignore next */_ProgressBar2.default.prototype.componentDidMount.restore();
+  });
+
+  it('should call componentWillReceiveProps', function () {
+    /* istanbul ignore next */_sinon2.default.spy( /* istanbul ignore next */_ProgressBar2.default.prototype, 'componentWillReceiveProps');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    renderedComponent.setProps({ percent: 50 });
+    expect( /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillReceiveProps.calledOnce).toEqual(true);
+    /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillReceiveProps.restore();
+  });
+
+  it('should unset ProgressBar.interval after getting new props', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    var inst = renderedComponent.instance();
+
+    clock.tick(1000);
+    expect(inst.interval).toBeDefined();
+    inst.componentWillReceiveProps({ percent: 50 });
+    expect(inst.interval).toBeUndefined();
+  });
+
+  it('should unset ProgressBar.timeout after getting new props', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 100, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    var inst = renderedComponent.instance();
+
+    clock.tick(1000);
+    expect(inst.timeout).toBeDefined();
+    inst.componentWillReceiveProps({ percent: 50 });
+    expect(inst.timeout).toBeUndefined();
+  });
+
+  it('should set state to -1 after new route mounts', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    renderedComponent.setProps({ percent: 100 });
+    clock.tick(501);
+    expect(renderedComponent.state().percent).toEqual(-1);
+  });
+
+  it('should call componentWillUnmount', function () {
+    /* istanbul ignore next */_sinon2.default.spy( /* istanbul ignore next */_ProgressBar2.default.prototype, 'componentWillUnmount');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    renderedComponent.unmount();
+    expect( /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillUnmount.calledOnce).toEqual(true);
+    /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillUnmount.restore();
+  });
+
+  it('should unset ProgressBar.interval after unmounting', function () {
+    /* istanbul ignore next */_sinon2.default.spy( /* istanbul ignore next */_ProgressBar2.default.prototype, 'componentWillUnmount');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 0, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    var inst = renderedComponent.instance();
+
+    clock.tick(1000);
+    expect(inst.interval).toBeDefined();
+    renderedComponent.unmount();
+    expect(inst.interval).toBeUndefined();
+    /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillUnmount.restore();
+  });
+
+  it('should unset ProgressBar.timeout after unmounting', function () {
+    /* istanbul ignore next */_sinon2.default.spy( /* istanbul ignore next */_ProgressBar2.default.prototype, 'componentWillUnmount');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( // eslint-disable-line
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: 100, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+    var inst = renderedComponent.instance();
+
+    clock.tick(1000);
+    expect(inst.timeout).toBeDefined();
+    renderedComponent.unmount();
+    expect(inst.timeout).toBeUndefined();
+    /* istanbul ignore next */_ProgressBar2.default.prototype.componentWillUnmount.restore();
+  });
+
+  describe('increment progress', function () {
+    beforeEach(function () {
+      clock = /* istanbul ignore next */_sinon2.default.useFakeTimers();
+    });
+
+    afterEach(function () {
+      clock = /* istanbul ignore next */_sinon2.default.restore();
+    });
+
+    it('should start incrementing progress if 0 <= percent < 100', function () {
+      var initialPercent = 50;
+      var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: initialPercent, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+      clock.tick(1000);
+      expect(renderedComponent.state().percent).toBeGreaterThan(initialPercent);
+    });
+
+    it('should stop incrementing progress if percent >= 100', function () {
+      var initialPercent = 100;
+      var expected = -1;
+      var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ProgressBar2.default, /* istanbul ignore next */{ percent: initialPercent, updateProgress: function /* istanbul ignore next */updateProgress(noop) /* istanbul ignore next */{return noop;} }));
+
+      clock.tick(1000);
+      expect(renderedComponent.state().percent).toEqual(expected);
+    });
+  });
+});

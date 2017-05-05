@@ -1,0 +1,80 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.
+
+
+
+
+
+
+
+
+
+
+
+checkStore = checkStore; /* istanbul ignore next */exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+injectAsyncReducer = injectAsyncReducer; /* istanbul ignore next */exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+injectAsyncSagas = injectAsyncSagas; /* istanbul ignore next */exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+getAsyncInjectors = getAsyncInjectors;var /* istanbul ignore next */_conformsTo = require('lodash/conformsTo'); /* istanbul ignore next */var _conformsTo2 = _interopRequireDefault(_conformsTo);var /* istanbul ignore next */_isEmpty = require('lodash/isEmpty'); /* istanbul ignore next */var _isEmpty2 = _interopRequireDefault(_isEmpty);var /* istanbul ignore next */_isFunction = require('lodash/isFunction'); /* istanbul ignore next */var _isFunction2 = _interopRequireDefault(_isFunction);var /* istanbul ignore next */_isObject = require('lodash/isObject'); /* istanbul ignore next */var _isObject2 = _interopRequireDefault(_isObject);var /* istanbul ignore next */_isString = require('lodash/isString'); /* istanbul ignore next */var _isString2 = _interopRequireDefault(_isString);var /* istanbul ignore next */_invariant = require('invariant'); /* istanbul ignore next */var _invariant2 = _interopRequireDefault(_invariant);var /* istanbul ignore next */_warning = require('warning'); /* istanbul ignore next */var _warning2 = _interopRequireDefault(_warning);var /* istanbul ignore next */_reducers = require('reducers'); /* istanbul ignore next */var _reducers2 = _interopRequireDefault(_reducers);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    * Validate the shape of redux store
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    */function checkStore(store) {var shape = { dispatch: /* istanbul ignore next */_isFunction2.default, subscribe: /* istanbul ignore next */_isFunction2.default, getState: /* istanbul ignore next */_isFunction2.default, replaceReducer: /* istanbul ignore next */_isFunction2.default, runSaga: /* istanbul ignore next */_isFunction2.default, asyncReducers: /* istanbul ignore next */_isObject2.default }; /* istanbul ignore next */(0, _invariant2.default)( /* istanbul ignore next */(0, _conformsTo2.default)(store, shape), '(app/utils...) asyncInjectors: Expected a valid redux store');} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Inject an asynchronously loaded reducer
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */function injectAsyncReducer(store, isValid) {return function injectReducer(name, asyncReducer) {if (!isValid) checkStore(store); /* istanbul ignore next */(0, _invariant2.default)( /* istanbul ignore next */(0, _isString2.default)(name) && ! /* istanbul ignore next */(0, _isEmpty2.default)(name) && /* istanbul ignore next */(0, _isFunction2.default)(asyncReducer), '(app/utils...) injectAsyncReducer: Expected `asyncReducer` to be a reducer function');if (Reflect.has(store.asyncReducers, name)) return;store.asyncReducers[name] = asyncReducer; // eslint-disable-line no-param-reassign
+    store.replaceReducer( /* istanbul ignore next */(0, _reducers2.default)(store.asyncReducers));};} /**
+                                                                                                       * Inject an asynchronously loaded saga
+                                                                                                       */function injectAsyncSagas(store, isValid) {return function injectSagas(sagas) {if (!isValid) checkStore(store); /* istanbul ignore next */(0, _invariant2.default)(Array.isArray(sagas), '(app/utils...) injectAsyncSagas: Expected `sagas` to be an array of generator functions'); /* istanbul ignore next */(0, _warning2.default)(! /* istanbul ignore next */(0, _isEmpty2.default)(sagas), '(app/utils...) injectAsyncSagas: Received an empty `sagas` array');sagas.map(store.runSaga);};} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * Helper for creating injectors
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */function getAsyncInjectors(store) {checkStore(store);return { injectReducer: injectAsyncReducer(store, true), injectSagas: injectAsyncSagas(store, true) };}

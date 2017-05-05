@@ -1,0 +1,68 @@
+/* istanbul ignore next */'use strict';
+
+
+
+var /* istanbul ignore next */_effects = require('redux-saga/effects');
+var /* istanbul ignore next */_utils = require('redux-saga/lib/utils');
+
+var /* istanbul ignore next */_reactRouterRedux = require('react-router-redux');
+
+var /* istanbul ignore next */_constants = require('containers/App/constants');
+var /* istanbul ignore next */_actions = require('containers/App/actions');
+
+var /* istanbul ignore next */_sagas = require('../sagas'); /**
+                                                             * Tests for HomePage sagas
+                                                             */var username = 'mxstbr';
+
+/* eslint-disable redux-saga/yield-effects */
+describe('getRepos Saga', function () {
+  var getReposGenerator = /* istanbul ignore next */void 0;
+
+  // We have to test twice, once for a successful load and once for an unsuccessful one
+  // so we do all the stuff that happens beforehand automatically in the beforeEach
+  beforeEach(function () {
+    getReposGenerator = /* istanbul ignore next */(0, _sagas.getRepos)();
+
+    var selectDescriptor = getReposGenerator.next().value;
+    expect(selectDescriptor).toMatchSnapshot();
+
+    var callDescriptor = getReposGenerator.next(username).value;
+    expect(callDescriptor).toMatchSnapshot();
+  });
+
+  it('should dispatch the reposLoaded action if it requests the data successfully', function () {
+    var response = [{
+      name: 'First repo' },
+    {
+      name: 'Second repo' }];
+
+    var putDescriptor = getReposGenerator.next(response).value;
+    expect(putDescriptor).toEqual( /* istanbul ignore next */(0, _effects.put)( /* istanbul ignore next */(0, _actions.reposLoaded)(response, username)));
+  });
+
+  it('should call the repoLoadingError action if the response errors', function () {
+    var response = new Error('Some error');
+    var putDescriptor = getReposGenerator.throw(response).value;
+    expect(putDescriptor).toEqual( /* istanbul ignore next */(0, _effects.put)( /* istanbul ignore next */(0, _actions.repoLoadingError)(response)));
+  });
+});
+
+describe('githubDataSaga Saga', function () {
+  var githubDataSaga = /* istanbul ignore next */(0, _sagas.githubData)();
+  var mockedTask = /* istanbul ignore next */(0, _utils.createMockTask)();
+
+  it('should start task to watch for LOAD_REPOS action', function () {
+    var takeLatestDescriptor = githubDataSaga.next().value;
+    expect(takeLatestDescriptor).toEqual( /* istanbul ignore next */(0, _effects.takeLatest)( /* istanbul ignore next */_constants.LOAD_REPOS, /* istanbul ignore next */_sagas.getRepos));
+  });
+
+  it('should yield until LOCATION_CHANGE action', function () {
+    var takeDescriptor = githubDataSaga.next(mockedTask).value;
+    expect(takeDescriptor).toEqual( /* istanbul ignore next */(0, _effects.take)( /* istanbul ignore next */_reactRouterRedux.LOCATION_CHANGE));
+  });
+
+  it('should cancel the forked task when LOCATION_CHANGE happens', function () {
+    var cancelDescriptor = githubDataSaga.next().value;
+    expect(cancelDescriptor).toEqual( /* istanbul ignore next */(0, _effects.cancel)(mockedTask));
+  });
+});

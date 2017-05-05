@@ -1,0 +1,19 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<ListItem />', function () {
+  it('should have a className', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ className: 'test' }));
+    expect(renderedComponent.find('li').prop('className')).toBeDefined();
+  });
+
+  it('should render the content passed to it', function () {
+    var content = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */'Hello world!');
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ item: content }));
+
+    expect(renderedComponent.contains(content)).toBe(true);
+  });
+});

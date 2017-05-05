@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1folzuyslk = function () {var path = '/var/www/to do list/app/components/A/index.js',hash = '12a1e68da17fcb6a2e88663bdbea6c6683096964',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/A/index.js', statementMap: { '0': { start: { line: 7, column: 10 }, end: { line: 13, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  color: #41addd;\n\n  &:hover {\n    color: #6cc0e5;\n  }\n'], ['\n  color: #41addd;\n\n  &:hover {\n    color: #6cc0e5;\n  }\n']);
+
+
+
+var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                           * A link to a certain page, an anchor tag
+                                                                                                                                                                                                                                                                                                                                                                                                                           */var A = /* istanbul ignore next */(++cov_1folzuyslk.s[0], /* istanbul ignore next */_styledComponents2.default.a(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+
+
+A;

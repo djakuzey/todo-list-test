@@ -1,0 +1,58 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_xmjk0l684 = function () {var path = '/var/www/to do list/app/utils/request.js',hash = 'bfbb2d4338dd10d00797e39d2ee1ee22810b14a9',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/utils/request.js', statementMap: { '0': { start: { line: 11, column: 2 }, end: { line: 11, column: 25 } }, '1': { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, '2': { start: { line: 23, column: 4 }, end: { line: 23, column: 20 } }, '3': { start: { line: 26, column: 16 }, end: { line: 26, column: 46 } }, '4': { start: { line: 27, column: 2 }, end: { line: 27, column: 28 } }, '5': { start: { line: 28, column: 2 }, end: { line: 28, column: 14 } }, '6': { start: { line: 40, column: 2 }, end: { line: 42, column: 21 } } }, fnMap: { '0': { name: 'parseJSON', decl: { start: { line: 10, column: 9 }, end: { line: 10, column: 18 } }, loc: { start: { line: 10, column: 29 }, end: { line: 12, column: 1 } }, line: 10 }, '1': { name: 'checkStatus', decl: { start: { line: 21, column: 9 }, end: { line: 21, column: 20 } }, loc: { start: { line: 21, column: 31 }, end: { line: 29, column: 1 } }, line: 21 }, '2': { name: 'request', decl: { start: { line: 39, column: 24 }, end: { line: 39, column: 31 } }, loc: { start: { line: 39, column: 46 }, end: { line: 43, column: 1 } }, line: 39 } }, branchMap: { '0': { loc: { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, type: 'if', locations: [{ start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }], line: 22 }, '1': { loc: { start: { line: 22, column: 6 }, end: { line: 22, column: 53 } }, type: 'binary-expr', locations: [{ start: { line: 22, column: 6 }, end: { line: 22, column: 28 } }, { start: { line: 22, column: 32 }, end: { line: 22, column: 53 } }], line: 22 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+request; /* istanbul ignore next */require('whatwg-fetch'); /**
+                                                             * Parses the JSON returned by a network request
+                                                             *
+                                                             * @param  {object} response A response from a network request
+                                                             *
+                                                             * @return {object}          The parsed JSON from the request
+                                                             */function parseJSON(response) {/* istanbul ignore next */++cov_xmjk0l684.f[0];++cov_xmjk0l684.s[0];return response.json();} /**
+                                                                                                                                                                                           * Checks if a network request came back fine, and throws an error if not
+                                                                                                                                                                                           *
+                                                                                                                                                                                           * @param  {object} response   A response from a network request
+                                                                                                                                                                                           *
+                                                                                                                                                                                           * @return {object|undefined} Returns either the response, or throws an error
+                                                                                                                                                                                           */function checkStatus(response) {/* istanbul ignore next */++cov_xmjk0l684.f[1];++cov_xmjk0l684.s[1];if ( /* istanbul ignore next */(++cov_xmjk0l684.b[1][0], response.status >= 200) && /* istanbul ignore next */(++cov_xmjk0l684.b[1][1], response.status < 300)) {/* istanbul ignore next */++cov_xmjk0l684.b[0][0];++cov_xmjk0l684.s[2];return response;} else /* istanbul ignore next */{++cov_xmjk0l684.b[0][1];}var error = /* istanbul ignore next */(++cov_xmjk0l684.s[3], new Error(response.statusText)); /* istanbul ignore next */++cov_xmjk0l684.s[4];error.response = response; /* istanbul ignore next */++cov_xmjk0l684.s[5];throw error;} /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * Requests a URL, returning a promise
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * @param  {string} url       The URL we want to request
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * @param  {object} [options] The options we want to pass to "fetch"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * @return {object}           The response data
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */function request(url, options) {/* istanbul ignore next */++cov_xmjk0l684.f[2];++cov_xmjk0l684.s[6];return fetch(url, options).then(checkStatus).then(parseJSON);}

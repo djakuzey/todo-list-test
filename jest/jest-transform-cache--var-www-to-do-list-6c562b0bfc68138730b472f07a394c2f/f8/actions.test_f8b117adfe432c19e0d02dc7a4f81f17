@@ -1,0 +1,51 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_constants = require('../constants');
+
+
+
+
+
+var /* istanbul ignore next */_actions = require('../actions');
+
+
+
+
+
+describe('App Actions', function () {
+  describe('loadRepos', function () {
+    it('should return the correct type', function () {
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.LOAD_REPOS };
+
+
+      expect( /* istanbul ignore next */(0, _actions.loadRepos)()).toEqual(expectedResult);
+    });
+  });
+
+  describe('reposLoaded', function () {
+    it('should return the correct type and the passed repos', function () {
+      var fixture = ['Test'];
+      var username = 'test';
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.LOAD_REPOS_SUCCESS,
+        repos: fixture,
+        username: username };
+
+
+      expect( /* istanbul ignore next */(0, _actions.reposLoaded)(fixture, username)).toEqual(expectedResult);
+    });
+  });
+
+  describe('repoLoadingError', function () {
+    it('should return the correct type and the error', function () {
+      var fixture = {
+        msg: 'Something went wrong!' };
+
+      var expectedResult = {
+        type: /* istanbul ignore next */_constants.LOAD_REPOS_ERROR,
+        error: fixture };
+
+
+      expect( /* istanbul ignore next */(0, _actions.repoLoadingError)(fixture)).toEqual(expectedResult);
+    });
+  });
+});

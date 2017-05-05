@@ -1,0 +1,8 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_vqrnpptu6 = function () {var path = '/var/www/to do list/app/containers/HomePage/Input.js',hash = '0002456bcba15681952fb29d0117a32d4a2f2bbb',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/containers/HomePage/Input.js', statementMap: { '0': { start: { line: 3, column: 14 }, end: { line: 6, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  outline: none;\n  border-bottom: 1px dotted #999;\n'], ['\n  outline: none;\n  border-bottom: 1px dotted #999;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var Input = /* istanbul ignore next */(++cov_vqrnpptu6.s[0], /* istanbul ignore next */_styledComponents2.default.input(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+Input;

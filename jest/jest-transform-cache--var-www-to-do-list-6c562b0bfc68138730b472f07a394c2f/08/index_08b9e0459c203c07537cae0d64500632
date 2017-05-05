@@ -1,0 +1,30 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_6gq3wihoc = function () {var path = '/var/www/to do list/app/components/Footer/index.js',hash = '44c4e45ac31900fcff0aa48be50a408151360f3b',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/Footer/index.js', statementMap: { '0': { start: { line: 10, column: 2 }, end: { line: 27, column: 4 } } }, fnMap: { '0': { name: 'Footer', decl: { start: { line: 9, column: 9 }, end: { line: 9, column: 15 } }, loc: { start: { line: 9, column: 18 }, end: { line: 28, column: 1 } }, line: 9 } }, branchMap: {}, s: { '0': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_A = require('components/A'); /* istanbul ignore next */var _A2 = _interopRequireDefault(_A);
+var /* istanbul ignore next */_LocaleToggle = require('containers/LocaleToggle'); /* istanbul ignore next */var _LocaleToggle2 = _interopRequireDefault(_LocaleToggle);
+var /* istanbul ignore next */_Wrapper = require('./Wrapper'); /* istanbul ignore next */var _Wrapper2 = _interopRequireDefault(_Wrapper);
+var /* istanbul ignore next */_messages = require('./messages'); /* istanbul ignore next */var _messages2 = _interopRequireDefault(_messages);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function Footer() {/* istanbul ignore next */++cov_6gq3wihoc.f[0];++cov_6gq3wihoc.s[0];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Wrapper2.default, /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.licenseMessage)),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_LocaleToggle2.default, /* istanbul ignore next */null)),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_extends({},
+        /* istanbul ignore next */_messages2.default.authorMessage, {
+          values: {
+            author: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_A2.default, /* istanbul ignore next */{ href: 'https://twitter.com/mxstbr' }, /* istanbul ignore next */'Max Stoiber') } })))));
+
+
+
+
+
+} /* istanbul ignore next */exports.default =
+
+Footer;

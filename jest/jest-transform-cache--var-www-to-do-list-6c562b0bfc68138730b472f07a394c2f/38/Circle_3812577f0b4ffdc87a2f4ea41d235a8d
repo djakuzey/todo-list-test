@@ -1,0 +1,52 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_7j7i0ud59 = function () {var path = '/var/www/to do list/app/components/LoadingIndicator/Circle.js',hash = 'd39ee30c53241f5846c7cdf11d690b52a10641d5',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/LoadingIndicator/Circle.js', statementMap: { '0': { start: { line: 4, column: 24 }, end: { line: 14, column: 1 } }, '1': { start: { line: 16, column: 15 }, end: { line: 45, column: 1 } }, '2': { start: { line: 17, column: 26 }, end: { line: 43, column: 3 } }, '3': { start: { line: 44, column: 2 }, end: { line: 44, column: 29 } }, '4': { start: { line: 47, column: 0 }, end: { line: 50, column: 2 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 16, column: 15 }, end: { line: 16, column: 16 } }, loc: { start: { line: 16, column: 26 }, end: { line: 45, column: 1 } }, line: 16 } }, branchMap: { '0': { loc: { start: { line: 23, column: 6 }, end: { line: 27, column: 5 } }, type: 'binary-expr', locations: [{ start: { line: 23, column: 6 }, end: { line: 23, column: 18 } }, { start: { line: 23, column: 22 }, end: { line: 27, column: 5 } }], line: 23 }, '1': { loc: { start: { line: 38, column: 8 }, end: { line: 41, column: 7 } }, type: 'binary-expr', locations: [{ start: { line: 38, column: 8 }, end: { line: 38, column: 19 } }, { start: { line: 38, column: 23 }, end: { line: 41, column: 7 } }], line: 38 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, f: { '0': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = _taggedTemplateLiteral(['\n  0%,\n  39%,\n  100% {\n    opacity: 0;\n  }\n\n  40% {\n    opacity: 1;\n  }\n'], ['\n  0%,\n  39%,\n  100% {\n    opacity: 0;\n  }\n\n  40% {\n    opacity: 1;\n  }\n']),_templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n    ', '\n\n    &:before {\n      content: \'\';\n      display: block;\n      margin: 0 auto;\n      width: 15%;\n      height: 15%;\n      background-color: #999;\n      border-radius: 100%;\n      animation: ', ' 1.2s infinite ease-in-out both;\n      ', '\n    }\n  '], ['\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n    ', '\n\n    &:before {\n      content: \'\';\n      display: block;\n      margin: 0 auto;\n      width: 15%;\n      height: 15%;\n      background-color: #999;\n      border-radius: 100%;\n      animation: ', ' 1.2s infinite ease-in-out both;\n      ', '\n    }\n  ']);var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _taggedTemplateLiteral(strings, raw) {return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));}
+
+var circleFadeDelay = /* istanbul ignore next */(++cov_7j7i0ud59.s[0], (0, _styledComponents.keyframes)(_templateObject)); /* istanbul ignore next */++cov_7j7i0ud59.s[1];
+
+
+
+
+
+
+
+
+
+
+
+var Circle = function Circle(props) {/* istanbul ignore next */++cov_7j7i0ud59.f[0];
+  var CirclePrimitive = /* istanbul ignore next */(++cov_7j7i0ud59.s[2], /* istanbul ignore next */_styledComponents2.default.div(_templateObject2,
+
+
+
+
+
+  /* istanbul ignore next */(++cov_7j7i0ud59.b[0][0], props.rotate) && /* istanbul ignore next */(++cov_7j7i0ud59.b[0][1], '\n      -webkit-transform: rotate(' +
+  props.rotate + 'deg);\n      -ms-transform: rotate(' +
+  props.rotate + 'deg);\n      transform: rotate(' +
+  props.rotate + 'deg);\n    '),
+
+
+
+
+
+
+
+
+
+
+  circleFadeDelay,
+  /* istanbul ignore next */(++cov_7j7i0ud59.b[1][0], props.delay) && /* istanbul ignore next */(++cov_7j7i0ud59.b[1][1], '\n        -webkit-animation-delay: ' +
+  props.delay + 's;\n        animation-delay: ' +
+  props.delay + 's;\n      '))); /* istanbul ignore next */++cov_7j7i0ud59.s[3];
+
+
+
+  return (/* istanbul ignore next */_react2.default.createElement(CirclePrimitive, /* istanbul ignore next */null));
+}; /* istanbul ignore next */++cov_7j7i0ud59.s[4];
+
+Circle.propTypes = {
+  delay: /* istanbul ignore next */_react.PropTypes.number,
+  rotate: /* istanbul ignore next */_react.PropTypes.number }; /* istanbul ignore next */exports.default =
+
+
+Circle;

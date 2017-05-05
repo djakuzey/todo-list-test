@@ -1,0 +1,32 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<ToggleOption />', function () {
+  it('should render default language messages', function () {
+    var defaultEnMessage = 'someContent';
+    var message = /* istanbul ignore next */(0, _reactIntl.defineMessages)({
+      enMessage: {
+        id: 'boilerplate.containers.LocaleToggle.en',
+        defaultMessage: defaultEnMessage } });
+
+
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'en' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ value: 'en', message: message.enMessage })));
+
+
+    expect(renderedComponent.contains( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ value: 'en', message: message.enMessage }))).toBe(true);
+  });
+
+  it('should display `value`(two letter language code) when `message` is absent', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'de' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ value: 'de' })));
+
+
+    expect(renderedComponent.text()).toBe('de');
+  });
+});

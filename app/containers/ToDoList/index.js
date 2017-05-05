@@ -47,7 +47,7 @@ ToDoList.propTypes = {
     PropTypes.shape({
       id:       PropTypes.number,
       title:    PropTypes.string,
-      isDone:   PropTypes.bool,
+      isDone:   PropTypes.bool, 
       subtasks: PropTypes.arrayOf(
         PropTypes.shape({
           id:     PropTypes.number,
@@ -60,7 +60,6 @@ ToDoList.propTypes = {
 };
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     tasks: state.get('tasks'),
   };

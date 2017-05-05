@@ -1,0 +1,61 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_enzyme = require('enzyme');
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactIntl = require('react-intl');
+
+var /* istanbul ignore next */_RepoListItem = require('containers/RepoListItem'); /* istanbul ignore next */var _RepoListItem2 = _interopRequireDefault(_RepoListItem);
+var /* istanbul ignore next */_List = require('components/List'); /* istanbul ignore next */var _List2 = _interopRequireDefault(_List);
+var /* istanbul ignore next */_LoadingIndicator = require('components/LoadingIndicator'); /* istanbul ignore next */var _LoadingIndicator2 = _interopRequireDefault(_LoadingIndicator);
+var /* istanbul ignore next */_index = require('../index'); /* istanbul ignore next */var _index2 = _interopRequireDefault(_index);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('<ReposList />', function () {
+  it('should render the loading indicator when its loading', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{ loading: /* istanbul ignore next */true }));
+
+    expect(renderedComponent.contains( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */{ component: /* istanbul ignore next */_LoadingIndicator2.default }))).toEqual(true);
+  });
+
+  it('should render an error if loading failed', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.mount)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.IntlProvider, /* istanbul ignore next */{ locale: 'en' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{
+        loading: false,
+        error: { message: 'Loading failed!' } })));
+
+
+
+    expect(renderedComponent.text()).toMatch(/Something went wrong/);
+  });
+
+  it('should render the repositories if loading was successful', function () {
+    var repos = [{
+      owner: {
+        login: 'mxstbr' },
+
+      html_url: 'https://github.com/react-boilerplate/react-boilerplate',
+      name: 'react-boilerplate',
+      open_issues_count: 20,
+      full_name: 'react-boilerplate/react-boilerplate' }];
+
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{
+      repos: repos,
+      error: false }));
+
+
+
+    expect(renderedComponent.contains( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List2.default, /* istanbul ignore next */{ items: repos, component: /* istanbul ignore next */_RepoListItem2.default }))).toEqual(true);
+  });
+
+  it('should not render anything if nothing interesting is provided', function () {
+    var renderedComponent = /* istanbul ignore next */(0, _enzyme.shallow)(
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_index2.default, /* istanbul ignore next */{
+      repos: false,
+      error: false,
+      loading: false }));
+
+
+
+    expect(renderedComponent.html()).toEqual(null);
+  });
+});

@@ -15,7 +15,11 @@ const initialState = [
     id: 0,
     title: 'hello',
     isDone: false,
-    subtasks: [],
+    subtasks: [{
+      id: 5,
+      title: 'hello',
+      isDone: false,
+    }],
   },
 
   {

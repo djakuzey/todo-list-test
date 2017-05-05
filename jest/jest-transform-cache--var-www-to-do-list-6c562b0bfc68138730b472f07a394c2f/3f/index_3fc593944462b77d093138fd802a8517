@@ -1,0 +1,121 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.HomePage = undefined;var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mapDispatchToProps = mapDispatchToProps;var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);var /* istanbul ignore next */_reactHelmet = require('react-helmet'); /* istanbul ignore next */var _reactHelmet2 = _interopRequireDefault(_reactHelmet);var /* istanbul ignore next */_reactIntl = require('react-intl');var /* istanbul ignore next */_reactRedux = require('react-redux');var /* istanbul ignore next */_reselect = require('reselect');var /* istanbul ignore next */_selectors = require('containers/App/selectors');var /* istanbul ignore next */_H = require('components/H2'); /* istanbul ignore next */var _H2 = _interopRequireDefault(_H);var /* istanbul ignore next */_ReposList = require('components/ReposList'); /* istanbul ignore next */var _ReposList2 = _interopRequireDefault(_ReposList);var /* istanbul ignore next */_AtPrefix = require('./AtPrefix'); /* istanbul ignore next */var _AtPrefix2 = _interopRequireDefault(_AtPrefix);var /* istanbul ignore next */_CenteredSection = require('./CenteredSection'); /* istanbul ignore next */var _CenteredSection2 = _interopRequireDefault(_CenteredSection);var /* istanbul ignore next */_Form = require('./Form'); /* istanbul ignore next */var _Form2 = _interopRequireDefault(_Form);var /* istanbul ignore next */_Input = require('./Input'); /* istanbul ignore next */var _Input2 = _interopRequireDefault(_Input);var /* istanbul ignore next */_Section = require('./Section'); /* istanbul ignore next */var _Section2 = _interopRequireDefault(_Section);var /* istanbul ignore next */_messages = require('./messages'); /* istanbul ignore next */var _messages2 = _interopRequireDefault(_messages);var /* istanbul ignore next */_actions = require('../App/actions');var /* istanbul ignore next */_actions2 = require('./actions');var /* istanbul ignore next */_selectors2 = require('./selectors'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * HomePage
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This is the first thing users see of our App, at the '/' route
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */var HomePage = exports.HomePage = function (_React$PureComponent) {_inherits(HomePage, _React$PureComponent);function HomePage() {_classCallCheck(this, HomePage);return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));}_createClass(HomePage, [{ key: 'componentDidMount', // eslint-disable-line react/prefer-stateless-function
+    /**
+     * when initial state username is not null, submit the form to load repos
+     */value: function componentDidMount() {if (this.props.username && this.props.username.trim().length > 0) {this.props.onSubmitForm();}} }, { key: 'render', value: function render() {/* istanbul ignore next */var _props = this.props,loading = _props.loading,error = _props.error,repos = _props.repos;var reposListProps = { loading: loading, error: error, repos: repos };return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactHelmet2.default, /* istanbul ignore next */{ title: 'Home Page', meta: [{ name: 'description', content: 'A React.js Boilerplate application homepage' }] }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_CenteredSection2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_H2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.startProjectHeader)), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.startProjectMessage))), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Section2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_H2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.trymeHeader)), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Form2.default, /* istanbul ignore next */{ onSubmit: this.props.onSubmitForm }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'label', /* istanbul ignore next */{ htmlFor: 'username' }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.trymeMessage), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AtPrefix2.default, /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactIntl.FormattedMessage, /* istanbul ignore next */_messages2.default.trymeAtPrefix)), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Input2.default, /* istanbul ignore next */{ id: 'username', type: 'text', placeholder: 'mxstbr', value: this.props.username, onChange: this.props.onChangeUsername }))), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ReposList2.default, reposListProps)))));} }]);return HomePage;}( /* istanbul ignore next */_react2.default.PureComponent);HomePage.propTypes = { loading: /* istanbul ignore next */_react2.default.PropTypes.bool, error: /* istanbul ignore next */_react2.default.PropTypes.oneOfType([/* istanbul ignore next */_react2.default.PropTypes.object, /* istanbul ignore next */_react2.default.PropTypes.bool]), repos: /* istanbul ignore next */_react2.default.PropTypes.oneOfType([/* istanbul ignore next */_react2.default.PropTypes.array, /* istanbul ignore next */_react2.default.PropTypes.bool]), onSubmitForm: /* istanbul ignore next */_react2.default.PropTypes.func, username: /* istanbul ignore next */_react2.default.PropTypes.string, onChangeUsername: /* istanbul ignore next */_react2.default.PropTypes.func };function mapDispatchToProps(dispatch) {return { onChangeUsername: function /* istanbul ignore next */onChangeUsername(evt) /* istanbul ignore next */{return dispatch( /* istanbul ignore next */(0, _actions2.changeUsername)(evt.target.value));}, onSubmitForm: function /* istanbul ignore next */onSubmitForm(evt) {if (evt !== undefined && evt.preventDefault) evt.preventDefault();dispatch( /* istanbul ignore next */(0, _actions.loadRepos)());} };
+}
+
+var mapStateToProps = /* istanbul ignore next */(0, _reselect.createStructuredSelector)({
+  repos: /* istanbul ignore next */(0, _selectors.makeSelectRepos)(),
+  username: /* istanbul ignore next */(0, _selectors2.makeSelectUsername)(),
+  loading: /* istanbul ignore next */(0, _selectors.makeSelectLoading)(),
+  error: /* istanbul ignore next */(0, _selectors.makeSelectError)() });
+
+
+// Wrap the component to inject dispatch and state into it
+/* istanbul ignore next */exports.default = /* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(HomePage);

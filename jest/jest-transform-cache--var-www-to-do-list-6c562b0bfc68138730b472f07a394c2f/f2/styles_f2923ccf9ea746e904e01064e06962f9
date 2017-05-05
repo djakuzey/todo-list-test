@@ -1,0 +1,30 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_5tayrvy0h = function () {var path = '/var/www/to do list/app/components/TodoInput/styles.js',hash = '2a1f5f90804a18eadd1bb1a8b12defc15f7efabe',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/var/www/to do list/app/components/TodoInput/styles.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_aphrodite = require('aphrodite'); /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */_aphrodite.StyleSheet.create({
+
+
+	create_task: {
+		padding: '10px',
+		marginBottom: '20px;',
+		display: 'flex',
+		alignItems: 'center' },
+
+
+	btn_todo: {
+		backgroundColor: '#66d466',
+		width: '25%',
+		borderRadius: '5px',
+		color: 'white',
+		height: '30px',
+		padding: '0 10px',
+		margin: '0 5px',
+		outline: 'none' },
+
+
+	input_text: {
+		outline: 'none',
+		paddingLeft: '10px',
+		height: '30px',
+		width: '75%',
+		border: '1px solid #333',
+		borderRadius: '5px' } });
